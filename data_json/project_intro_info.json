@@ -1,0 +1,32 @@
+[
+    {
+        "title": "Ewenli-shop",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas maximus consectetur volutpat. Etiam ut malesuada arcu. Phasellus gravida ullamcorper turpis sit amet ullamcorper. Vestibulum ex sem, posuere quis diam quis, dapibus tincidunt arcu.",
+        "img": "ewenli",
+        "pagename": "ewenli-shop",
+        "id": 0
+    },
+
+    {
+        "title": "Aggregator of courses",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas maximus consectetur volutpat. Etiam ut malesuada arcu. Phasellus gravida ullamcorper turpis sit amet ullamcorper. Vestibulum ex sem, posuere quis diam quis, dapibus tincidunt arcu.",
+        "img": "courses",
+        "pagename": "courses_aggregator",
+        "id": 1
+    },
+
+    {
+        "title": "Adorable Music",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas maximus consectetur volutpat. Etiam ut malesuada arcu. Phasellus gravida ullamcorper turpis sit amet ullamcorper. Vestibulum ex sem, posuere quis diam quis, dapibus tincidunt arcu.",
+        "img": "music",
+        "pagename": "adorable_music",
+        "id": 2
+    },
+    {
+        "title": "Shop of replica of luxury clothes",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas maximus consectetur volutpat. Etiam ut malesuada arcu. Phasellus gravida ullamcorper turpis sit amet ullamcorper. Vestibulum ex sem, posuere quis diam quis, dapibus tincidunt arcu.",
+        "img": "telbot",
+        "pagename": "telegram_bot_shop",
+        "id": 3
+    }
+]

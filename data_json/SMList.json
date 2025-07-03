@@ -1,0 +1,31 @@
+[
+    {
+        "title": "LinkedIn",
+        "img": "/smbar_icons/linkedin.svg",
+        "link": "www.linkedin.com/in/alexander-drobyshevski-9656b2330"
+    },
+
+    {
+        "title": "Telegram",
+        "img": "/smbar_icons/telegram.svg",
+        "link": "https://t.me/gogonga"
+    },
+
+    {
+        "title": "Instagram",
+        "img": "/smbar_icons/instagram.svg",
+        "link": "https://www.instagram.com/belmigrant/"
+    },
+
+    {
+        "title": "GitHub",
+        "img": "/smbar_icons/github.svg",
+        "link": "https://github.com/Drobysz"
+    },
+
+    {
+        "title": "Discord",
+        "img": "/smbar_icons/discord.svg",
+        "link": "https://discord.com/channels/@drobysz"
+    }
+]
