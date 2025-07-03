@@ -1,0 +1,32 @@
+.hoverText {
+  transition:
+    0.35s font-weight,
+    0.35s color;
+}
+
+.hoverText:hover {
+  font-weight: 900;
+  color: oklch(30% 0.25 240);
+}
+
+/* To the right */
+.hoverText:hover + .hoverText {
+  font-weight: 500;
+  color: oklch(50% 0.20 240);
+}
+
+.hoverText:hover + .hoverText + .hoverText {
+  font-weight: 300;
+  color: oklch(70% 0.12 240);
+}
+
+/* To the left */
+.hoverText:has(+ .hoverText:hover) {
+  font-weight: 500;
+  color: oklch(50% 0.20 240);
+}
+
+.hoverText:has(+ .hoverText + .hoverText:hover) {
+  font-weight: 300;
+  color: oklch(70% 0.12 240);
+}
