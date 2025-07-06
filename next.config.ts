@@ -1,7 +1,13 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  basePath: '/portfolio-app',
+
+  assetPrefix: '/portfolio-app/',
+
+  output: 'export',
+  
+  productionBrowserSourceMaps: false,
 };
 
 export default nextConfig;
