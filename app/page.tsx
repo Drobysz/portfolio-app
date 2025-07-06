@@ -1,4 +1,12 @@
-import { ColorfulSquaresBackground, TypeWriterEffectText, ContainerTextFlip, Timeline, HelpfulLinks } from "@/components/index";
+import { ColorfulSquaresBackground, TypeWriterEffectText, ContainerTextFlip } from "@/components/index";
+import { Timeline } from "./content/Timeline";
+import { HelpfulLinks } from "./content/HelpfulLinks";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "History",
+    description: "Here you can review the completed journey that Alexander has taken",
+};
 
 export default function Home() {
   const skills: string[] = [ 
@@ -27,9 +35,7 @@ export default function Home() {
           </div>
         </div> 
       </section>
-      
       <Timeline />
-
       <HelpfulLinks />
     </>
   );

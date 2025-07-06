@@ -6,11 +6,12 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { DetailedHTMLProps, HTMLAttributes, useState, useEffect, useRef, useContext } from "react";
 import { motion } from "framer-motion";
+import cn from "classnames";
 import { AppContext } from "@/app/context/AppContext";
 
 type NavbarType = DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement>;
 
-export const Navbar = ({}: NavbarType)=>{
+export const Navbar = ({className}: NavbarType)=>{
     const pathname = usePathname();
 
     // Position when tab is being hovered
@@ -26,7 +27,7 @@ export const Navbar = ({}: NavbarType)=>{
     });
 
     // List of tabs
-    const TabsList = [
+    const tabsList = [
         { href: '/', label: 'History' },
         { href: '/projects', label: 'Projects' },
         { href: '/resume', label: 'Resumé' },
@@ -34,10 +35,10 @@ export const Navbar = ({}: NavbarType)=>{
 
     return (
         <nav 
-            className="h-full relative flex gap-4 items-center"
+            className={cn("h-full relative flex gap-4 items-center", className)}
             onMouseLeave={()=> setPosition(positionClicked)}
         >
-            { TabsList.map(tab=> (
+            { tabsList.map(tab=> (
                 <Tab
                     key={"id_" + tab.label}
                     isActive={pathname === tab.href}

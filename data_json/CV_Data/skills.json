@@ -1,0 +1,6 @@
+{
+    "Front-end": ["Javascript", "React.js", "Next.js", "Vite.js", "Typescript", "Three.js", "Tailwind CSS", 
+        "SASS", "Framer-motion"],
+    "Back-end": ["PHP OOP", "Laravel", "Redis", "MySQL"],
+    "Devops": ["Docker", "Nginx", "Amazon S3"]
+}

@@ -4,22 +4,30 @@ import { createContext, Dispatch, ReactNode, SetStateAction, useState } from "re
 
 interface AppContextProps {
     isVisible: boolean;
+    isMenuOpened: boolean;
     setVisible: Dispatch<SetStateAction<boolean>>
+    setMenuOpened: Dispatch<SetStateAction<boolean>>
 };
 
 export const AppContext = createContext<AppContextProps>({
     isVisible: false,
-    setVisible: ()=> {}
+    isMenuOpened: false,
+    setVisible: ()=> {},
+    setMenuOpened: ()=> {},
 });
 
 export const AppContextProvider = ({children}: {children: ReactNode})=> {
     const [ isVisible, setVisible ] = useState(false);
+    const [isMenuOpened, setMenuOpened] = useState(false);
+
 
     return (
         <AppContext.Provider
             value={{
                 isVisible: isVisible,
-                setVisible
+                isMenuOpened,
+                setVisible,
+                setMenuOpened
             }}
         >
             {children}

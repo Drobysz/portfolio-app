@@ -1,16 +1,10 @@
 import { Header } from "./layout/Header";
 import { Footer } from "./layout/Footer";
+import { SidebarMenu } from "./layout/SidebarMenu/SidebarMenu";
 
 import styles from "./layout/GridLayout.module.scss"
+import { AppContextProvider } from "./context/AppContext";
 import "./globals.css";
-
-import type { Metadata } from "next";
-
-
-export const metadata: Metadata = {
-  title: "Main page",
-  description: "",
-};
 
 export default function RootLayout({
   children,
@@ -20,13 +14,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className='bg-[#0a0a0a]'>
-          <div className={styles.wrapper}>
-              <Header className={styles.header}/>
-              <main className={styles.main}> 
-                {children}
-              </main>
-              <Footer className={styles.footer}/>
-          </div>
+          <AppContextProvider>
+            <SidebarMenu />
+            <div className={styles.wrapper}>
+                <Header className={styles.header}/>
+                <main className={styles.main}> 
+                  {children}
+                </main>
+                <Footer className={styles.footer}/>
+            </div>
+          </AppContextProvider>
       </body>
     </html>
   );

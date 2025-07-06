@@ -2,6 +2,8 @@
 
 @theme {
     /* color palette */
+    --color-pinkish : #953396;
+    --color-gold : #E2BA41;
     /* shadow */
     --shadow-3xl: 35px 35px 4rem 0.5rem black; 
 }

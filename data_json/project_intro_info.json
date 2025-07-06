@@ -1,32 +1,28 @@
 [
     {
         "title": "Ewenli-shop",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas maximus consectetur volutpat. Etiam ut malesuada arcu. Phasellus gravida ullamcorper turpis sit amet ullamcorper. Vestibulum ex sem, posuere quis diam quis, dapibus tincidunt arcu.",
+        "description": "This project was made in the frame of MMI faculty cousrsework SAE203 and as a commercial project. The project represents a beat license store of an independent author Ewenli.",
         "img": "ewenli",
-        "pagename": "ewenli-shop",
-        "id": 0
+        "pagename": "ewenli-shop"
     },
 
     {
         "title": "Aggregator of courses",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas maximus consectetur volutpat. Etiam ut malesuada arcu. Phasellus gravida ullamcorper turpis sit amet ullamcorper. Vestibulum ex sem, posuere quis diam quis, dapibus tincidunt arcu.",
+        "description": "A course aggregator of modern professions. Every page touching a profession contains a set of courses of different private schools including info about the course itself (price, description, rating, etc). The page will be also providing with a list of advantages and some data from HeadHunter on wages ( a russian analog of Indeed ).",
         "img": "courses",
-        "pagename": "courses_aggregator",
-        "id": 1
+        "pagename": "courses_aggregator"
     },
 
     {
         "title": "Adorable Music",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas maximus consectetur volutpat. Etiam ut malesuada arcu. Phasellus gravida ullamcorper turpis sit amet ullamcorper. Vestibulum ex sem, posuere quis diam quis, dapibus tincidunt arcu.",
+        "description": "A mini university project made specially for SAÉ105 of MMI. The task was to make a page with your the most favorite albums and songs.",
         "img": "music",
-        "pagename": "adorable_music",
-        "id": 2
+        "pagename": "adorable_music"
     },
     {
         "title": "Shop of replica of luxury clothes",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas maximus consectetur volutpat. Etiam ut malesuada arcu. Phasellus gravida ullamcorper turpis sit amet ullamcorper. Vestibulum ex sem, posuere quis diam quis, dapibus tincidunt arcu.",
+        "description": "The project is a telegram bot representing a store of clothing. The store has a line of products of famous and luxurious cloth brands.",
         "img": "telbot",
-        "pagename": "telegram_bot_shop",
-        "id": 3
+        "pagename": "telegram_bot_shop"
     }
 ]

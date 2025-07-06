@@ -1,0 +1,24 @@
+[
+    {
+        "duration": "april 2023 - august 2023",
+        "jobs": [
+            {
+                "position": "traducteur",
+                "tasks": "(l'anglais - la russe) - platform Unbabel;"
+            }
+        ]
+    },
+    {
+        "duration": "june 2024 - present",
+        "jobs": [
+            {
+                "position": "freelance",
+                "tasks": "telegram bot development for small et middle-sized businesses;"
+            },
+            {
+                "position": "e-commerce",
+                "tasks": "Sales of subscriptions to online services through an e-commerce Telegram-bot. Complete project management development deployment, customer support;"
+            }
+        ]
+    }
+]

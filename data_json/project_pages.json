@@ -1,0 +1,54 @@
+[
+    {
+        "title": "Ewenli-shop",
+        "description": "This project was made in the frame of MMI faculty cousrsework SAE203 and as a commercial project. The project represents a beat license store of an independent author Ewenli.",
+        "stacks": {
+            "frontend": ["Next.js", "React", "Tailwind", "Sass", "Framer-motion", "Three.js"],
+            "backend": ["Laravel", "MySQL", "StripeAPI", "Redis"],
+            "devops": ["Docker", "Amazon S3", "Nginx"]
+        },
+        "pagename": "ewenli-shop",
+        "GH_link": "https://github.com/Drobysz/ewenli_beat_app",
+        "site_link": "https://ewenli-shop.uk/",
+        "date": "June 2025 - present"
+    },
+    {
+        "title": "Aggregator of courses",
+        "description": "A course aggregator of modern professions. Every page touching a profession contains a set of courses of different private schools including info about the course itself (price, description, rating, etc). The page will be also providing with a list of advantages and some data from HeadHunter on wages ( a russian analog of Indeed ).",
+        "stacks": {
+            "frontend": ["Next.js", "React", "Tailwind", "Sass"],
+            "backend": ["none"],
+            "devops": ["Docker"]
+        },
+        "pagename": "courses_aggregator",
+        "GH_link": "https://github.com/Drobysz/course_aggregator",
+        "site_link": "none",
+        "date": "March 2025"
+    },
+    {
+        "title": "Adorable Music",
+        "description": "A mini university project made specially for SAÉ105 of MMI. The task was to make a page with your the most favorite albums and songs.",
+        "stacks": {
+            "frontend": ["HTMl", "CSS", "JS", "DeeplAPI"],
+            "backend": ["SQLite", "PHP"],
+            "devops": ["none"]
+        },
+        "pagename": "adorable_music",
+        "GH_link": "https://github.com/Drobysz/my_favorite_music",
+        "site_link": "http://drabysheuski.projetsmmichamps.fr/sae105",
+        "date": "December 2024"
+    },
+    {
+        "title": "Shop of replica of luxury clothes",
+        "description": "The project is a telegram bot representing a store of clothing. The store has a line of products of famous and luxurious cloth brands.",
+        "stacks": {
+            "frontend": ["TelegramBotApi", "python"],
+            "backend": ["SQLite", "python", "Stripe"],
+            "devops": ["PM2"]
+        },
+        "pagename": "telegram_bot_shop",
+        "GH_link": "https://github.com/Drobysz/baraholka",
+        "site_link": "https://t.me/Planoise_test_bot",
+        "date": "May 2024"
+    }
+]

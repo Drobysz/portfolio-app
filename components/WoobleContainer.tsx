@@ -9,12 +9,14 @@ export const WobbleContainer = ({
   children,
   className,
   color="pinkish",
-  href="#"
+  href="#",
+  centralize
 }: {
   children: React.ReactNode;
   className?: string;
   color?: "pinkish" | "rosy" | "blue";
   href?: string; 
+  centralize?: boolean;
 }) => {
   const router = useRouter();  
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -62,7 +64,9 @@ export const WobbleContainer = ({
               : "translate3d(0px, 0px, 0) scale3d(1, 1, 1)",
             transition: "transform 0.1s ease-out",
           }}
-          className="h-full px-4 py-20 sm:px-10"
+          className={cn("h-full px-4 py-20 sm:px-10", {
+            ["flex justify-center items-center"]: centralize,
+          })}
         >
           <Noise />
           {children}

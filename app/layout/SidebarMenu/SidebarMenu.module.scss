@@ -1,0 +1,28 @@
+.hoverText {
+    transition:
+        0.35s color,
+        0.35s scale,
+}
+
+.hoverText:hover {
+    scale: 145%;
+    color: blue;
+}
+
+/* To the right */
+.hoverText:hover + .hoverText {
+    scale: 125%;
+}
+
+.hoverText:hover + .hoverText + .hoverText {
+    scale: 115%;
+}
+
+/* To the left */
+.hoverText:has(+ .hoverText:hover) {
+    scale: 125%;
+}
+
+.hoverText:has(+ .hoverText + .hoverText:hover) {
+    scale: 115%;
+}

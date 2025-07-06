@@ -113,7 +113,7 @@ const ProjectPanel = ({ currentProject, index, setPosition }: ProjectPanelProps)
     return (
         <div
             ref={ref}
-            className="group relative w-full place-content-center border-4 border-neutral-600 h-[100px] overflow-hidden rounded-3xl"
+            className="group relative cursor-pointer w-full place-content-center border-4 border-neutral-600 h-[100px] overflow-hidden rounded-3xl"
             onMouseEnter={()=> handleInteraction(true)}
             onMouseLeave={()=> handleInteraction(false)}
             onClick={()=> handleInteraction("clicked")}

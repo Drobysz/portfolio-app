@@ -18,16 +18,16 @@ export const ProjectIntro = ()=> {
                 { project && ( 
                     <motion.div 
                         key={project.pagename}
-                        className="flex flex-col w-[35vw] z-30 gap-8"
+                        className="flex flex-col w-[35vw] z-30 gap-8 max-[560px]:gap-4"
                         variants={variantsTextContent}
                         initial="hidden"
                         animate="visible"
                         exit="exit"
                     >
-                        <h2 className={cn("text-white text-5xl font-bold", bagel_fat_one.className)}>
+                        <h2 className={cn("text-white text-5xl font-bold max-[860px]:text-3xl max-[560px]:text-xl", bagel_fat_one.className)}>
                             {title}
                         </h2>
-                        <p className={cn("text-transparent font-extralight bg-gradient-to-br from-white to-gray-400 bg-clip-text", avenir.className)}>
+                        <p className={cn("text-transparent font-extralight bg-gradient-to-br from-white to-gray-400 bg-clip-text max-[860px]:text-sm max-[560px]:text-xs", avenir.className)}>
                             {description}
                         </p>
                         <CustomBtn
@@ -52,7 +52,7 @@ export const ProjectIntro = ()=> {
             <AnimatePresence>
                 <motion.div 
                     key={project.pagename}
-                    className="absolute right-0 h-full w-[65%] rounded-md"
+                    className="absolute right-0 h-full w-[55%] rounded-md max-[1032px]:h-[80%] max-[800px]:h-[50%]"
                     style={{
                         backgroundImage: `url(/project_images/${img}.png)`,
                         backgroundSize: "cover",
