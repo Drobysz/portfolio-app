@@ -4,7 +4,7 @@ import { Suspense } from "react";
 import { ProjectPage } from "./content/ProjectPage"; 
 import { FullScreenSpin } from "@/components/index";
 
-export async function generateStaticparams() {
+export async function generateStaticParams() {
     return projects.map(p=> ({ 
         project: p.pagename 
     }));   
