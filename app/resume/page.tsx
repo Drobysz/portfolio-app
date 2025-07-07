@@ -39,7 +39,7 @@ const ContactData = ()=> {
                     <div
                         className="h-[300px] min-w-[200px] rounded-2xl mb-5 border-3 border-zinc-700"
                         style={{
-                            backgroundImage: "url(/portfolio.jpeg)",
+                            backgroundImage: "url(portfolio.jpeg)",
                             backgroundSize: "cover",
                         }}
                     />

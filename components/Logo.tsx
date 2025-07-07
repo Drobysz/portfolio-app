@@ -6,7 +6,7 @@ export const Logo = ({className, titleClassName}: {className?: string, titleClas
     return (
         <div className={cn("h-full flex gap-3 items-center", className)}>
             <Image 
-                src="/logo.png"
+                src="logo.png"
                 height={40}
                 width={35}
                 alt="logo"

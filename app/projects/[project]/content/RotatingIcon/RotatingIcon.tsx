@@ -70,7 +70,7 @@ export const RotatingIcon = ({ img, title }: RotatingIconProps)=> {
                         ['scale-3d scale-105 perspective-distant']: isHovered
                     })}
                     style={{
-                        backgroundImage: `url(/project_images/${img}.png)`,
+                        backgroundImage: `url(project_images/${img}.png)`,
                         backgroundSize: "cover",
                     }}
                 />
