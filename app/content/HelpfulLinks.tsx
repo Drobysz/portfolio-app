@@ -13,7 +13,7 @@ export const HelpfulLinks = ()=>{
             >
                 <h3 className="text-white font-bold text-7xl max-[580px]:text-5xl max-[350px]:text-3xl">GitHub</h3>
                 <Image 
-                    src="help_links/github.png"
+                    src="/help_links/github.png"
                     className="absolute -bottom-30 -right-[20%] rounded-2xl max-[1080px]:-bottom-48"
                     width={600}
                     height={300}
@@ -34,7 +34,7 @@ export const HelpfulLinks = ()=>{
             >
                 <h3 className="text-white font-bold text-7xl z-50 max-[565px]:text-5xl max-[430px]:text-4xl max-[350px]:text-3xl">My LinkedIn</h3>
                 <Image 
-                    src="help_links/linkedin.png"
+                    src="/help_links/linkedin.png"
                     className="absolute -bottom-30 -right-[5%] rounded-2xl max-[1080px]:-bottom-50 max-[1080px]:-right-[15%] max-[750px]:-right-[35%] max-[565px]:-bottom-25 max-[450px]:-bottom-15 max-[430px]:hidden"
                     width={600}
                     height={300}

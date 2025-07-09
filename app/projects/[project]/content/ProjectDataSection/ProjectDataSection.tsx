@@ -10,9 +10,9 @@ export const ProjectDataSection = ({ projectData }: ProjectDataObj)=> {
     const img = projects.find( p=> p.pagename === projectData.pagename )!.img;
 
     return (
-        <section className="flex flex-col w-[50%] items-center justify-center mx-auto gap-10 content-center mb-20">
+        <section className="flex flex-col w-[50%] items-center justify-center mx-auto gap-10 content-center mb-20 max-[650px]:w-[70%] max-[650px]:gap-5 max-[400px]:w-[85%] max-[400px]:gap-3">
             <h2
-                className="bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600 text-6xl font-extrabold max-[1216px]:text-5xl max-[991px]:text-4xl max-[778px]:text-3xl max-[658px]:text-2xl"
+                className="bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600 text-6xl font-extrabold max-[1216px]:text-5xl max-[991px]:text-4xl max-[778px]:text-3xl max-[658px]:text-2xl max-[340px]:text-xl"
             >
                 {projectData.date}
             </h2>

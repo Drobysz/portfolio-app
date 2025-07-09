@@ -54,7 +54,7 @@ export const ProjectIntro = ()=> {
                     key={project.pagename}
                     className="absolute right-0 h-full w-[55%] rounded-md max-[1032px]:h-[80%] max-[800px]:h-[50%]"
                     style={{
-                        backgroundImage: `url(project_images/${img}.png)`,
+                        backgroundImage: `url(/project_images/${img}.png)`,
                         backgroundSize: "cover",
                     }}
                     variants={variantsBackgroundContent}

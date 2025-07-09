@@ -10,7 +10,7 @@ export const CustomBtn = ({ color="white", size="medium", link, children, classN
     return (
         <button
             onClick={()=> router.push(link)}
-            className={cn("transition-all cursor-pointer duration-300 ease-in-out w-fit", className, {
+            className={cn("transition-all cursor-pointer duration-300 ease-in-out w-fit h-fit", className, {
                 // Size
                 ["px-3 py-2 text-3xl rounded-2xl font-bold max-[750px]:text-xl max-[560px]:rounded-lg max-[560px]:px-1.5 max-[560px]:py-1"]: size==="medium",
                 ["px-1.5 py-1 rounded-xl"]: size==="small",

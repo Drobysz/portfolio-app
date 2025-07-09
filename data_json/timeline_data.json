@@ -2,25 +2,25 @@
     { 
         "date": "2020",
         "title": "Olympiade",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc neque tellus, faucibus in magna et, hendrerit euismod magna. Donec viverra pulvinar erat a rutrum. Proin feugiat blandit maximus. Cras eros risus, sodales vel malesuada et, fringilla in velit. Vivamus ornare enim vitae purus rutrum ullamcorper. Nullam lacinia congue ex, vulputate suscipit velit mollis at. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla eu euismod metus. Suspendisse a nibh vulputate, commodo turpis vitae, blandit purus. Pellentesque pretium congue consequat. Fusce vehicula tellus eros, et congue purus tristique in.",
+        "description": "1) In 2019, I joined a programming group, where I solved algorithmic problems of various levels, first on PascalABC, and then on C++. I also participated in several Olympiads on behalf of the public school that organized the circle. The last time I managed to reach the regional stage, however, I didn't have enough points to reach the last republican stage. I didn't attend the club anymore.",
         "img": "Olympiade" 
     },
     { 
         "date": "2024 May",
         "title": "E-Commerce, Telegram bots, Freelance, Self-education",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc neque tellus, faucibus in magna et, hendrerit euismod magna. Donec viverra pulvinar erat a rutrum. Proin feugiat blandit maximus. Cras eros risus, sodales vel malesuada et, fringilla in velit. Vivamus ornare enim vitae purus rutrum ullamcorper. Nullam lacinia congue ex, vulputate suscipit velit mollis at. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla eu euismod metus. Suspendisse a nibh vulputate, commodo turpis vitae, blandit purus. Pellentesque pretium congue consequat. Fusce vehicula tellus eros, et congue purus tristique in.",
+        "description": "In the summer of my 24th year, I started learning Python development. I studied the basic syntax, PHP, Code (Package manager), Lamba, decorators, iterators, OP, list comprehension, generator expressions, Flask, Django (frameworks). Also, to run a small commercial business, I immersed myself in the study of Telegram bot development. I started writing bots in Telegram to order and for personal purposes. Mydrop-shipping bot in telegram is @Planoise_test_bot.",
         "img": "Bot" 
     },
     { 
-        "date": "2024-2025",
+        "date": "2024-present",
         "title": "Joining to IUT de Marne-la-Vallé",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc neque tellus, faucibus in magna et, hendrerit euismod magna. Donec viverra pulvinar erat a rutrum. Proin feugiat blandit maximus. Cras eros risus, sodales vel malesuada et, fringilla in velit. Vivamus ornare enim vitae purus rutrum ullamcorper. Nullam lacinia congue ex, vulputate suscipit velit mollis at. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla eu euismod metus. Suspendisse a nibh vulputate, commodo turpis vitae, blandit purus. Pellentesque pretium congue consequat. Fusce vehicula tellus eros, et congue purus tristique in.",
+        "description": "In 2024, I joined MMI. This program combines several disciplines: marketing, graphics, design and programming. In programming, we studied the layout database (HTML, CSS), the basic syntax of Javascript and PHP, and we also learned how to work with the MySQL database management system.",
         "img": "IUT" 
     },
     { 
         "date": "2025-present",
         "title": "Self-education",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc neque tellus, faucibus in magna et, hendrerit euismod magna. Donec viverra pulvinar erat a rutrum. Proin feugiat blandit maximus. Cras eros risus, sodales vel malesuada et, fringilla in velit. Vivamus ornare enim vitae purus rutrum ullamcorper. Nullam lacinia congue ex, vulputate suscipit velit mollis at. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla eu euismod metus. Suspendisse a nibh vulputate, commodo turpis vitae, blandit purus. Pellentesque pretium congue consequat. Fusce vehicula tellus eros, et congue purus tristique in.",
+        "description": "Since February 2025, I have continued my self-study in various areas: Front-end, Back-end, DevOps. I've studied React, Next, Tailwind, Sass, Framer-motion, Three.js for the Front-end. To build the api, I learned OOP in PHP, Laravel framework, and Redis. To deploy the server, I studied containerization on Docker, for port forwarding, I discovered Nginx and for remote storage of media and audio files, and began to understand buckets on Amazon S3. Since the beginning of my self-education (end of February 2025) I've created 2 projects on Next.js",
         "img": "Self-education" 
     }
 ]

@@ -58,7 +58,7 @@ const ProjectPanel = ({ currentProject, index, setPosition }: ProjectPanelProps)
         currentIndex !== index 
         ?
             {
-                backgroundImage:    `url(project_covers/${currentProject.img}.png)`,
+                backgroundImage:    `url(/project_covers/${currentProject.img}.png)`,
                 backgroundSize:     "cover",
                 backgroundPosition: "center",
             }
