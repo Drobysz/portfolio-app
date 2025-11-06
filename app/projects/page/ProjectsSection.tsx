@@ -1,6 +1,6 @@
 'use client'
 
-import { ProjectsContext, ProjectProps } from "../context/temp.context";
+import { ProjectsContext, ProjectProps } from "@/app/projects/context/projects.context";
 import { useContext, useLayoutEffect, useState, useRef } from "react";
 import { impact } from "@/fonts/fonts";
 import cn from "classnames";

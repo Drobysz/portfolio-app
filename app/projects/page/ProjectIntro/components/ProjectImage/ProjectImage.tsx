@@ -1,4 +1,4 @@
-import { ProjectsContext } from "../../../../context/temp.context";
+import { ProjectsContext } from "@/app/projects/context/projects.context";
 import { AnimatePresence, motion } from "framer-motion";
 import { useContext } from "react";
 import { variantsBackgroundContent } from "./../AnimationProps";
