@@ -6,9 +6,9 @@ export const SMtag = ({title}: {title: string})=> {
 		<AnimatePresence>
 			<motion.p
 				className={cn(
-					"absolute z-10 -top-8 left-2.5 w-fit",
+					"absolute z-10 -top-8 right-[50%] w-fit",
 					"rounded-md border border-neutral-900",
-					"text-neutral-400 text-xs",
+					"text-neutral-400 text-xs translate-x-[50%]",
 					"p-1.5 bg-neutral-800"
 				)}
 
