@@ -1,4 +1,7 @@
+// https://ui.aceternity.com/components/canvas-reveal-effect
+
 "use client";
+
 import cn from "classnames";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import React, { useMemo, useRef } from "react";

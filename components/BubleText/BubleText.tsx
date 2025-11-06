@@ -1,12 +1,11 @@
 'use client'
 
 import { motion } from "framer-motion"; 
-import { FC } from "react";
 import BtnProps from "./BubleText.props";
 
 import styles from './Bubble.module.scss';
 
-export const Bubletext: FC<BtnProps> = ({text, className}) => {
+export const Bubletext = ({text, className}: BtnProps) => {
     return (
         <motion.h2 
             className={className}

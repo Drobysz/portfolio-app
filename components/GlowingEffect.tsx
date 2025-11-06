@@ -1,3 +1,5 @@
+// https://ui.aceternity.com/components/glowing-effect
+
 "use client";
 
 import { memo, ReactNode, useCallback, useEffect, useRef } from "react";

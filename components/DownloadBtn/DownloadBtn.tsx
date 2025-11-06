@@ -17,7 +17,7 @@ export const DownloadBtn = ({
   downloadFileName,
   ...props
 }: DonwloadBtnProps)=> {
-  const [hovered, setHovered] = useState<boolean>(false);
+  const [hovered, setHovered] = useState(false);
   const [direction, setDirection] = useState<Direction>(Direction.top);
 
   const rotateDirection = (currentDirection: Direction): Direction => {
