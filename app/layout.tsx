@@ -1,6 +1,6 @@
 import { Header, Footer, SidebarMenu } from "./layout/index";
 import styles from "./layout/GridLayout.module.scss"
-import { AppContextProvider } from "./context/AppContext";
+import { AppContextProvider } from "./context/app.context";
 import "./globals.css";
 
 export default function RootLayout({

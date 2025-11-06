@@ -4,7 +4,7 @@ import cn from "classnames";
 import { useContext } from "react";
 import { DetailedHTMLProps, HTMLAttributes } from "react";
 import { DownloadBtn, Navbar, Logo, HeaderWrapper, MenuBtn } from "@/components/index";
-import { AppContext } from "../context/AppContext";
+import { AppContext } from "../context/app.context";
 
 type HeaderType = DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>;
 

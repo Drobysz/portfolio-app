@@ -1,7 +1,7 @@
 "use client"
 
 import { useContext } from "react";
-import { AppContext } from "@/app/context/AppContext";
+import { AppContext } from "@/app/context/app.context";
 import { bagel_fat_one } from "@/fonts/fonts";
 import styles from "./SidebarMenu.module.scss";
 import cn from "classnames";

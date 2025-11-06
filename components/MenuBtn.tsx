@@ -3,7 +3,7 @@
 import { useWindowWidth } from "@/hooks/indexHooks";
 import Image from "next/image";
 import { useContext, useEffect } from "react";
-import { AppContext } from "@/app/context/AppContext";
+import { AppContext } from "@/app/context/app.context";
 import cn from "classnames";
 
 export const MenuBtn = ({className}: {className: string})=> {

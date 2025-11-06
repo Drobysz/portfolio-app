@@ -1,4 +1,4 @@
-import { AppContext } from "@/app/context/AppContext";
+import { AppContext } from "@/app/context/app.context";
 import Link from "next/link";
 import { useContext, useEffect, useRef } from "react";
 import { Tabprops } from "@/components/NavBar/NavBarProps.interface";
