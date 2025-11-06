@@ -1,4 +1,4 @@
-import { ProjectsContextProvider } from "./context/projects.context";
+import { ProjectsContextProvider } from "./context/temp.context";
 import { BackgroundLines }  from "@/components/index";
 import { ProjectIntro, ProjectsSection } from "./page/index";
 import type { Metadata } from "next";
