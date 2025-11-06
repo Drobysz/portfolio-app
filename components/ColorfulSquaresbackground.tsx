@@ -17,7 +17,12 @@ export const SquaresCore = ({ className, ...rest }: { className?: string }) => {
     "#A78BFA", 
     "#C4B5FD", 
   ];
-  const getRandomColor = () => {
+
+  const cubeColor = {
+    backgroundColor: `${getRandomColor()}`,
+    transition: { duration: 0 },
+  };
+  function getRandomColor () {
     return colors[Math.floor(Math.random() * colors.length)];
   };
 
@@ -39,10 +44,8 @@ export const SquaresCore = ({ className, ...rest }: { className?: string }) => {
         >
           {cols.map((_, j) => (
             <motion.div
-              whileHover={{
-                backgroundColor: `${getRandomColor()}`,
-                transition: { duration: 0 },
-              }}
+              whileHover={cubeColor}
+              whileTap={cubeColor}
               animate={{
                 transition: { duration: 2 },
               }}

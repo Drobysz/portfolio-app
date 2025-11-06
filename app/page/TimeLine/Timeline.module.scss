@@ -1,0 +1,17 @@
+@reference "tailwindcss";
+
+.timeline_section {
+	@apply flex flex-col relative gap-60 justify-center mb-[40rem];
+}
+
+@media (max-width: 890px) {
+	.timeline_section { @apply gap-[120px]; }
+}
+
+.buble_text {
+	@apply text-center font-extralight text-white text-8xl;
+}
+
+@media (max-width: 890px) { .buble_text { @apply text-7xl; } }
+@media (max-width: 590px) { .buble_text { @apply text-5xl; } }
+@media (max-width: 420px) { .buble_text { @apply text-4xl; } }

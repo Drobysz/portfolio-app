@@ -1,7 +1,6 @@
-import { ProjectsContextProvider } from "@/app/projects/context/Projects.context";
+import { ProjectsContextProvider } from "@/app/projects/context/projects.context";
 import { BackgroundLines }  from "@/components/index";
-import { ProjectIntro } from "./content/ProjectIntro";
-import { ProjectsSection } from "./content/ProjectsSection";
+import { ProjectIntro, ProjectsSection } from "./page/index";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {

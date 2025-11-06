@@ -1,0 +1,8 @@
+@reference "tailwindcss";
+
+.project_section_wrapper {
+	@apply flex flex-col w-[50%] items-center justify-center
+			mx-auto gap-10 content-center mb-20
+			max-[650px]:w-[70%] max-[650px]:gap-5
+			max-[400px]:w-[85%] max-[400px]:gap-3;
+}

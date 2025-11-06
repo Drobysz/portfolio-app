@@ -1,0 +1,13 @@
+@reference "tailwindcss";
+
+.colorful_line {
+	@apply w-1 h-[107%] absolute
+			top-40 origin-top
+			left-1.5 rounded-full
+}
+
+.line_shadow {
+	@apply h-full bg-linear-to-b
+			from-15% from-black
+			to-transparent z-20
+}

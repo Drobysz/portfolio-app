@@ -1,0 +1,7 @@
+@reference "tailwindcss";
+
+.event_section {
+	@apply flex flex-col gap-[45rem]
+			max-[600px]:gap-130
+			max-[390px]:gap-160
+}

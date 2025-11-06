@@ -19,14 +19,14 @@ export const SidebarMenu = ()=> {
     return (
         <aside 
             className={cn(bagel_fat_one.className, {
-                ["fixed inset-0 z-30 h-[100vh] w-[100vw] flex flex-col items-end justify-center p-7 text-white text-6xl max-[670px]:text-5xl max-[670px]:p-5 max-[520px]:text-4xl max-[520px]:p-3"]: isMenuOpened,
+                [styles.is_opened]: isMenuOpened,
                 ["hidden"]: !isMenuOpened
             })}
             style={{
                 background: 'linear-gradient( to right, transparent, #0A0A0A 70%)',
             }}
         >
-            <ul className="flex flex-col gap-10 max-[670px]:gap-8 max-[520px]:gap-6 pr-8 max-[670px]:pr-5 max-[520px]:pr-3">
+            <ul className={styles.menu_list_section}>
                 {tabsList.map((tab, idx)=> (
                     <Link
                         key={`tab_id_${idx}`}

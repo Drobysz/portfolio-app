@@ -1,0 +1,20 @@
+@reference "tailwindcss";
+
+.title {
+	@apply bg-clip-text text-transparent
+			bg-gradient-to-b from-neutral-200
+			to-neutral-600 text-6xl font-extrabold
+			max-[1216px]:text-5xl
+			max-[991px]:text-4xl
+			max-[778px]:text-3xl
+			max-[658px]:text-2xl
+			max-[340px]:text-xl;
+}
+
+.description {
+	@apply text-2xl text-white/70
+			max-[991px]:text-xl
+			max-[778px]:text-lg
+			max-[658px]:text-sm
+			max-[540px]:text-xs;
+}

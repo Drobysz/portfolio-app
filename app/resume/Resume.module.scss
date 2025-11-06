@@ -1,0 +1,8 @@
+@reference "tailwindcss";
+
+.resume_section {
+	@apply h-full w-full grid
+		grid-cols-4 gap-4 py-7
+		max-[650px]:flex
+		max-[650px]:flex-col;
+}

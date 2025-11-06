@@ -1,8 +1,9 @@
 import projects from "@/data_json/project_intro_info.json";
-import type { Metadata } from "next";
 import { Suspense } from "react";
-import { ProjectPage } from "./content/ProjectPage"; 
+import { ProjectPage } from "./page/ProjectPage"; 
 import { FullScreenSpin } from "@/components/index";
+import { generateProjectMetaData } from "./metadata";
+import { Metadata } from "next";
 
 export async function generateStaticParams() {
     return projects.map(p=> ({ 
@@ -10,27 +11,15 @@ export async function generateStaticParams() {
     }));   
 };
 
-export async function generateMetadata({ params }: { params: Promise<{ project: string; }> }): Promise<Metadata> {
-    const { project } = await params;
-    console.log(project);
-    const projectData = projects.find( p=> p.pagename === project );
-    return {
-        title: projectData?.title,
-        description: projectData?.description,
-        openGraph: {
-            title: projectData?.title,
-            description: projectData?.description,
-            images: [
-                {
-                    url: `/project_images/${projectData?.img}.png`,
-                    width: 1200,
-                    height: 630,
-                    alt: projectData?.img,
-                },
-            ]
-        }
-    };
-};
+export async function generateMetadata({
+    params
+}:
+{ 
+    params: { project: string } 
+}): Promise<Metadata> {
+    const { project } = await(params)
+    return generateProjectMetaData(project);
+}
 
 export default async function Page ({ params }: { params: Promise<{ project: string; }>  }) {    
     const { project } = await params;

@@ -1,0 +1,7 @@
+@reference "tailwindcss";
+
+.contact_image {
+	@apply h-[300px] min-w-[200px]
+		rounded-2xl mb-5
+		border-3 border-zinc-700;
+}

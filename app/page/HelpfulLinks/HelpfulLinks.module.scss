@@ -1,0 +1,62 @@
+@reference "tailwindcss";
+
+// container 1
+.container_1 {
+	@apply col-span-2 h-[350px] cursor-pointer
+		max-[1080px]:h-[250px]
+		max-[580px]:h-[150px]
+		max-[350px]:col-span-3
+}
+
+.container_title_1 {
+	@apply text-white font-bold text-7xl
+		max-[580px]:text-5xl
+		max-[350px]:text-3xl
+}
+
+.container_image_1 {
+	@apply absolute -bottom-30
+		-right-[20%] rounded-2xl
+		max-[1080px]:-bottom-48
+		max-[785px]:hidden
+}
+
+// container 2
+.container_2 {
+	@apply max-[1080px]:h-[250px]
+		max-[580px]:h-[150px]
+		max-[350px]:col-span-3
+}
+
+.container_title_2 {
+	@apply text-white font-bold
+		text-7xl w-full
+		max-[1080px]:text-6xl
+		max-[670px]:text-4xl
+		max-[450px]:text-lg
+}
+
+// container 3
+.container_3 {
+	@apply col-span-3 h-[300px]
+		cursor-pointer
+		max-[430px]:h-[150px]
+}
+
+.container_title_3 {
+	@apply text-white font-bold
+	text-7xl z-50
+	max-[565px]:text-5xl
+	max-[430px]:text-4xl
+	max-[350px]:text-3xl
+}
+
+.container_image_3 {
+	@apply absolute -bottom-30 -right-[5%]
+		rounded-2xl max-[1080px]:-bottom-50
+		max-[1080px]:-right-[15%]
+		max-[750px]:-right-[35%]
+		max-[565px]:-bottom-25
+		max-[450px]:-bottom-15
+		max-[430px]:hidden
+}

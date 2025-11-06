@@ -1,0 +1,9 @@
+@reference "tailwindcss";
+
+.event_image {
+	@apply w-[80%] h-[300px] rounded-4xl border-4
+			border-neutral-600 max-[390px]:rounded-2xl
+			max-[390px]:h-[100px]
+			max-[600px]:h-[150px] max-[600px]:rounded-3xl
+			max-[900px]:h-[200px]
+}

@@ -1,0 +1,14 @@
+@reference "tailwindcss";
+
+.title {
+	@apply text-white text-4xl
+			max-[600px]:text-2xl
+			max-[390px]:text-lg
+}
+
+.description {
+	@apply text-transparent bg-gradient-to-br
+			 from-white to-gray-400
+			 bg-clip-text
+			 max-[600px]:text-xs
+}

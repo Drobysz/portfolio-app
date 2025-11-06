@@ -1,0 +1,41 @@
+@reference "tailwindcss";
+
+.rotating_icon_section {
+	@apply relative w-full h-[140vh]
+		flex flex-col items-center
+		perspective-midrange pt-10 mb-5
+		max-[655px]:h-[125vh]
+		max-[550px]:mb-2;
+}
+
+.title {
+	@apply bg-clip-text text-transparent
+		bg-gradient-to-br from-yellow-500
+		to-red-400 text-center font-bold
+		text-8xl pt-20
+		max-[610px]:text-7xl
+		max-[475px]:text-6xl
+		max-[430px]:text-5xl
+		max-[341px]:text-4xl;
+}
+
+.icon_body {
+	@apply max-w-xl -mt-12 mx-auto h-[20rem]
+		w-full border-4 border-[#6C6C6C] p-6
+		bg-[rgb(34,34,34)] rounded-[30px]
+		shadow-2xl
+		max-[991px]:h-[18rem] max-[991px]:max-w-lg
+		max-[700px]:h-[15rem] max-[700px]:max-w-sm
+		max-[700px]:p-4 max-[700px]:-mt-10
+		max-[450px]:h-[13rem]
+		max-[341px]:max-w-3xs max-[341px]:h-[8rem]
+		max-[341px]:p-2 max-[341px]:rounded-lg;
+}
+
+.icon_content {
+	@apply h-full w-full
+		rounded-2xl
+		bg-zinc-900 md:rounded-2xl
+		p-4 transition-all duration-300
+		max-[341px]:rounded-lg;
+}

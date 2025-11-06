@@ -4,17 +4,17 @@ import { createContext, Dispatch, ReactNode, SetStateAction, useEffect, useState
 import projects from "@/data_json/project_intro_info.json";
 
 export interface ProjectProps {
-    title: string;
+    title:       string;
     description: string;
-    img: string;
-    pagename: string;
+    img:         string;
+    pagename:    string;
 };
 
 interface ProjectsContextProps {
-    project: ProjectProps;
+    project:      ProjectProps;
     currentIndex: number;
-    setHover: Dispatch<SetStateAction<boolean>>;
-    setIndex: Dispatch<SetStateAction<number>>;
+    setHover:     Dispatch<SetStateAction<boolean>>;
+    setIndex:     Dispatch<SetStateAction<number>>;
 };
 
 export const ProjectsContext = createContext<ProjectsContextProps>({

@@ -1,7 +1,4 @@
-import { Header } from "./layout/Header";
-import { Footer } from "./layout/Footer";
-import { SidebarMenu } from "./layout/SidebarMenu/SidebarMenu";
-
+import { Header, Footer, SidebarMenu } from "./layout/index";
 import styles from "./layout/GridLayout.module.scss"
 import { AppContextProvider } from "./context/AppContext";
 import "./globals.css";

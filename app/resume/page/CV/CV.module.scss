@@ -1,0 +1,19 @@
+@reference "tailwindcss";
+
+.colorful_frame {
+	@apply col-span-3 relative
+		h-[80vh] rounded-[2rem]
+		max-[1110px]:col-span-2;
+}
+
+.contact_data_section {
+	@apply shadow-[0px_0px_27px_0px_#2D2D2D]
+		scroll-smooth rounded-xl h-full
+		overflow-y-scroll overflow-x-hidden;
+}
+
+.section_frame {
+	@apply h-full w-full 
+		border-2 p-3.5 bg-[#0e0e0e]
+		rounded-[inherit] shadow-2xl;
+}

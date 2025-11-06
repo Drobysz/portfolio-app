@@ -1,0 +1,7 @@
+@reference "tailwindcss";
+
+.sm_text {
+	@apply cursor-pointer px-4
+		text-neutral-300 duration-200
+		hover:text-zinc-500 transition text-xl
+}
