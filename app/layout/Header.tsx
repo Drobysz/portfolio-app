@@ -23,7 +23,7 @@ export const Header = ({className}: HeaderType)=> {
             })}/>
             <div className="flex gap-2 items-center">
                 <DownloadBtn 
-                    href="/resume/CV_Drobysz.pdf"
+                    href="/resume/CV_Drobyshevski.pdf"
                     downloadFileName="Drobyshevski_CV"
                 >
                     Download CV
