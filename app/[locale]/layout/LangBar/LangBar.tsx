@@ -60,7 +60,7 @@ export const LangBar = ()=> {
                 ease: "easeIn",
             }}
             initial={{ translateX: '0%' }}
-            animate={{ translateX: hover ? '-15%' : '47%' }}
+            animate={{ translateX: hover ? '-15%' : '49%' }}
         >
             <div className="relative">
                 {opened &&
