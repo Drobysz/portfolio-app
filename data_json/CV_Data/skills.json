@@ -1,5 +1,5 @@
 {
-    "Front-end": ["Javascript", "React.js", "Next.js", "Vite.js", "Typescript", "Three.js", "Tailwind CSS", 
+    "Front-end": ["JS", "React.js", "Next.js", "Vite.js", "Typescript", "Three.js", "Tailwind", 
         "SASS", "Framer-motion"],
     "Back-end": ["PHP OOP", "Laravel", "Redis", "MySQL"],
     "Devops": ["Docker", "Nginx", "Amazon S3"]

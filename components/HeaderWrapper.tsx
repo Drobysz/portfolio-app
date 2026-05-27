@@ -3,7 +3,7 @@
 import { useMotionValueEvent, useScroll, motion } from "framer-motion";
 import { ReactNode, useContext } from "react";
 import cn from "classnames";
-import { AppContext } from "@/app/context/app.context";
+import { AppContext } from "@/app/[locale]/context/app.context";
 
 export const HeaderWrapper = ({children, className}: {children: ReactNode, className?: string})=> {
     const { isVisible, setVisible } = useContext(AppContext);

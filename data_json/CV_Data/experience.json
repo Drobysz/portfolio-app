@@ -1,10 +1,19 @@
 [
     {
-        "duration": "april 2023 - august 2023",
+        "duration": "may 2026 - present",
         "jobs": [
             {
-                "position": "traducteur",
-                "tasks": "(l'anglais - la russe) - platform Unbabel;"
+                "position": "Digital Harbor",
+                "tasks": [
+                    "Création et gestion d'une boutique en ligne proposant des abonnements à des services d'IA populaires, regroupés en un seul abonnement."
+                ]
+            },
+            {
+                "position": "Ewenli Licenses",
+                "tasks": [
+                    "Création et gestion d'une marketplace dédiée aux licences de bits",
+                    "Vente d'abonnements à un service de protection des droits d'auteur."
+                ]
             }
         ]
     },
@@ -12,12 +21,28 @@
         "duration": "june 2024 - present",
         "jobs": [
             {
-                "position": "freelance",
-                "tasks": "telegram bot development for small et middle-sized businesses;"
+                "position": "Développeur freelance (bots Telegram & web e-commerce)",
+                "tasks": [
+                    "Développé des bots Telegram e-commerce permettant la vente de services et de produits digitaux (Telegram Bot API, paiements), améliorant l’automatisation des ventes pour des PME.",
+                    "Conçu et déployé des solutions complètes de vente en ligne, incluant la gestion des paiements, des abonnements et du support client, de la conception au déploiement.",
+                    "Réalisé des sites web orientés vers la conversion pour la vente de licences musicales et de services additionnels (check-out tardif, animaux acceptés, etc.), augmentant la clarté de l’offre et l’expérience utilisateur.",
+                    "Assuré la maintenance et le support technique après livraison, garantissant la stabilité des solutions en production."
+                ]
             },
             {
                 "position": "e-commerce",
-                "tasks": "Sales of subscriptions to online services through an e-commerce Telegram-bot. Complete project management development deployment, customer support;"
+                "tasks": [
+                    "Sales of subscriptions to online services through an e-commerce Telegram-bot. Complete project management development deployment, customer support;"
+                ]
+            }
+        ]
+    },
+    {
+        "duration": "april 2023 - august 2023",
+        "jobs": [
+            {
+                "position": "traducteur",
+                "tasks": [ "(l'anglais - la russe) - platform Unbabel;" ]
             }
         ]
     }
