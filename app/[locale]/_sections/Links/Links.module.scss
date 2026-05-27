@@ -30,9 +30,10 @@
 
 .container_title_2 {
 	@apply text-white font-bold
-		text-7xl w-full
-		max-[1080px]:text-6xl
-		max-[670px]:text-4xl
+		text-6xl w-full
+		max-[1210px]:text-5xl
+		max-[824px]:text-4xl
+		max-[710px]:text-2xl
 		max-[450px]:text-lg
 }
 

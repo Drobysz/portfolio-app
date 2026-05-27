@@ -1,0 +1,27 @@
+@reference "tailwindcss";
+
+.body {
+    @apply relative flex rounded-full border content-center 
+        bg-black/20 hover:bg-black/10 transition duration-500
+        dark:bg-white/20 items-center flex-col flex-nowrap gap-10
+        h-min justify-center overflow-visible p-px box-decoration-clone w-fit
+        shrink-0;
+}
+
+.children_body {
+    @apply text-white z-10 bg-black px-4 py-2 rounded-[inherit];
+}
+
+.moving_gradient {
+    @apply flex-none inset-0 overflow-hidden absolute z-0 rounded-[inherit] blur-xs h-full w-full;
+}
+
+.mask {
+    @apply bg-black absolute z-1 flex-none inset-0.5 rounded-full;
+}
+
+@media (max-width: 445px) {
+    .children_body {
+        @apply px-2 py-2 text-sm;
+    }    
+}

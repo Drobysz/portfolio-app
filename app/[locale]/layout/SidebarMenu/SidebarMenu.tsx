@@ -5,15 +5,16 @@ import { AppContext } from "@/app/[locale]/context/app.context";
 import { bagel_fat_one } from "@/fonts/fonts";
 import styles from "./SidebarMenu.module.scss";
 import cn from "classnames";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
 
 export const SidebarMenu = ()=> {
     const { isMenuOpened, setMenuOpened } = useContext(AppContext);
-    // List of tabs
+    const t = useTranslations("Layout");
     const tabsList = [
-        { href: '/', label: 'History' },
-        { href: '/projects', label: 'Projects' },
-        { href: '/resume', label: 'Resumé' },
+        { href: '/', label: t('nav.0') },
+        { href: '/projects', label: t('nav.1') },
+        { href: '/resume', label: t('nav.2') },
     ];
 
     return (

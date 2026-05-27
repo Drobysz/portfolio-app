@@ -2,19 +2,15 @@
 
 import { motion, useMotionValue } from "framer-motion";
 import { SMBarProps } from "./SMbar.interface";
-import { SMBlock } from "./components/index";
-import cn from "classnames";
+import { SMBlock } from "./_components/index";
+import s from "./style.module.scss";
 
 export const SMbar = ({SMList}: SMBarProps)=> {
     const mouseX = useMotionValue(Infinity);
 
     return (
         <motion.nav 
-            className={cn(
-                "flex items-end justify-between",
-                "gap-6 h-16 rounded-2xl",
-                "px-4 pb-2 bg-neutral-900"
-            )}
+            className={s.body}
             onMouseMove={(e)=> mouseX.set(e.pageX)}
             onMouseLeave={()=> mouseX.set(Infinity)}
         >

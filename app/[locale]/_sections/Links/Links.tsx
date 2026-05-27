@@ -1,8 +1,11 @@
 import { WobbleContainer } from "@/components/index";
 import Image from "next/image";
 import styles from "./Links.module.scss";
+import { useTranslations } from "next-intl";
 
 export const Links = ()=>{
+    const t = useTranslations("Home.links");
+
     return (
         <section className="grid grid-cols-3 gap-6 mb-50">
             <WobbleContainer 
@@ -16,7 +19,7 @@ export const Links = ()=>{
                     className={styles.container_image_1}
                     width={600}
                     height={300}
-                    alt="service img"
+                    alt={t("serviceAlt")}
                 />
             </WobbleContainer>
             <WobbleContainer 
@@ -24,20 +27,20 @@ export const Links = ()=>{
                 className={styles.container_2}
                 centralize
             >
-                <h3 className={styles.container_title_2}>Enjoy the site</h3>
+                <h3 className={styles.container_title_2}>{t("enjoy")}</h3>
             </WobbleContainer>
             <WobbleContainer 
                 className={styles.container_3}
                 href="https://www.linkedin.com/in/alexander-drobyshevski-9656b2330/?trk=opento_sprofile_topcard"
                 color="pinkish"
             >
-                <h3 className={styles.container_title_3}>My LinkedIn</h3>
+                <h3 className={styles.container_title_3}>{t("linkedin")}</h3>
                 <Image 
                     src="/help_links/linkedin.png"
                     className={styles.container_image_3}
                     width={600}
                     height={300}
-                    alt="service img"
+                    alt={t("serviceAlt")}
                 />
             </WobbleContainer>
         </section>

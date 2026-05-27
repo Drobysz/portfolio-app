@@ -5,9 +5,11 @@ import { Bubletext } from "@/components/index";
 import { Line, Events } from "./components/index";
 import styles from "./Timeline.module.scss";
 import { useScroll, useSpring, useTransform } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 export const Timeline = ()=> {
     const ref = useRef<HTMLElement>(null);
+    const t = useTranslations("Home.timeline");
     const { scrollYProgress } = useScroll({
         target: ref
     });
@@ -27,7 +29,7 @@ export const Timeline = ()=> {
                 background={background}
             />
             <Bubletext 
-                text="History in timeline" 
+                text={t("title")} 
                 className={styles.buble_text}
             />
             <Events />

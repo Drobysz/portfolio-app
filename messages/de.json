@@ -1,3 +1,187 @@
 {
-    
+  "Metadata": {
+    "home": {
+      "title": "Werdegang",
+      "description": "Hier kannst du den bisherigen Weg von Alexander ansehen"
+    },
+    "resume": {
+      "title": "Lebenslauf",
+      "description": "Hier kannst du Alexanders Lebenslauf kennenlernen"
+    }
+  },
+  "Layout": {
+    "downloadCv": "Lebenslauf herunterladen",
+    "nav": {
+      "0": "Werdegang",
+      "1": "Projekte",
+      "2": "Lebenslauf"
+    }
+  },
+  "Home": {
+    "hero": {
+      "title": "Website von Alexander Drobysz",
+      "subtitle": "Ich arbeite mit",
+      "skills": {
+        "0": "Next.js",
+        "1": "React",
+        "2": "Tailwind",
+        "3": "Sass",
+        "4": "Framer Motion",
+        "5": "Docker",
+        "6": "Three.js",
+        "7": "Docker",
+        "8": "Amazon S3",
+        "9": "PHP",
+        "10": "Laravel",
+        "11": "Redis",
+        "12": "MySQL",
+        "13": "SQLite"
+      }
+    },
+    "timeline": {
+      "title": "Werdegang als Zeitleiste",
+      "items": {
+        "0": {
+          "date": "2020",
+          "title": "Olympiade",
+          "description": "2019 trat ich einem Programmierclub bei, in dem ich algorithmische Aufgaben verschiedener Schwierigkeitsgrade loste, zuerst mit PascalABC und spater mit C++. Ich nahm auch an mehreren Olympiaden im Namen der offentlichen Schule teil, die den Club organisierte. Beim letzten Mal erreichte ich die regionale Runde, hatte aber nicht genug Punkte fur die abschliessende republikanische Runde. Danach besuchte ich den Club nicht mehr."
+        },
+        "1": {
+          "date": "Mai 2024",
+          "title": "E-Commerce, Telegram-Bots, Freelance, Selbststudium",
+          "description": "Im Sommer 2024 begann ich, Python-Entwicklung zu lernen. Ich befasste mich mit Grundsyntax, PHP, Composer, Lambda-Funktionen, Dekoratoren, Iteratoren, OOP, List Comprehensions, Generator Expressions, Flask und Django. Um ein kleines kommerzielles Geschaft zu betreiben, vertiefte ich mich ausserdem in die Entwicklung von Telegram-Bots. Ich begann, Telegram-Bots fur Kunden und fur eigene Projekte zu schreiben. Mein Dropshipping-Bot auf Telegram ist @Planoise_test_bot."
+        },
+        "2": {
+          "date": "2024-heute",
+          "title": "Eintritt in das IUT de Marne-la-Vallee",
+          "description": "2024 begann ich MMI. Dieses Programm verbindet mehrere Disziplinen: Marketing, Grafik, Design und Programmierung. In der Programmierung lernten wir die Grundlagen des Weblayouts mit HTML und CSS, die Grundlagen von JavaScript und PHP sowie die Arbeit mit dem Datenbankmanagementsystem MySQL."
+        },
+        "3": {
+          "date": "2025-heute",
+          "title": "Selbststudium",
+          "description": "Seit Februar 2025 bilde ich mich selbststandig in mehreren Bereichen weiter: Front-end, Back-end und DevOps. Fur das Front-end habe ich React, Next.js, Tailwind, Sass, Framer Motion und Three.js gelernt. Fur den Aufbau von APIs lernte ich OOP in PHP, das Laravel-Framework und Redis. Fur das Deployment beschaftigte ich mich mit Containerisierung durch Docker, entdeckte Nginx fur Portweiterleitung und begann, Amazon-S3-Buckets fur entfernte Medien- und Audiodateien zu nutzen. Seit Beginn dieser Selbstlernphase Ende Februar 2025 habe ich zwei Projekte mit Next.js erstellt."
+        }
+      }
+    },
+    "links": {
+      "serviceAlt": "Service-Bild",
+      "enjoy": "Viel Spass auf der Website",
+      "linkedin": "Mein LinkedIn"
+    }
+  },
+  "Resume": {
+    "sections": {
+      "about": "Uber mich",
+      "skills": "Fahigkeiten",
+      "experience": "Erfahrung",
+      "education": "Ausbildung / Zertifikate"
+    },
+    "about": {
+      "text": "Freelance-Entwickler mit Fokus auf E-Commerce-Losungen und Erfahrung in der Entwicklung von Telegram-Bots sowie verkaufsorientierten Websites. Ich setze End-to-End-Projekte fur kleine und mittlere Unternehmen um: Vertriebsautomatisierung, Zahlungsverwaltung, Entwicklung, Deployment und Kundensupport. Derzeit bin ich im ersten Jahr des BUT Informatique am IUT de Marne-la-Vallee und entwickle meine Programmierkenntnisse parallel selbststandig weiter."
+    },
+    "skills": {
+      "categories": {
+        "0": "Front-end",
+        "1": "Back-end",
+        "2": "DevOps"
+      }
+    },
+    "experience": {
+      "0": {
+        "duration": "Mai 2026 - heute",
+        "jobs": {
+          "0": {
+            "position": "Digital Harbor",
+            "tasks": {
+              "0": "Aufbau und Verwaltung eines Onlineshops, der Abonnements fur beliebte KI-Dienste in einem einzigen Abo bundelt."
+            }
+          },
+          "1": {
+            "position": "Ewenli Licenses",
+            "tasks": {
+              "0": "Aufbau und Verwaltung eines Marktplatzes fur Beat-Lizenzen.",
+              "1": "Verkauf von Abonnements fur einen Dienst zum Schutz von Urheberrechten."
+            }
+          }
+        }
+      },
+      "1": {
+        "duration": "Juni 2024 - heute",
+        "jobs": {
+          "0": {
+            "position": "Freelance-Entwickler (Telegram-Bots & E-Commerce-Web)",
+            "tasks": {
+              "0": "Entwicklung von E-Commerce-Telegram-Bots fur den Verkauf von Dienstleistungen und digitalen Produkten mit Telegram Bot API und Zahlungen, wodurch die Vertriebsautomatisierung fur KMU verbessert wurde.",
+              "1": "Konzeption und Deployment kompletter Online-Verkaufslosungen, einschliesslich Zahlungsverwaltung, Abonnements und Kundensupport, von der Idee bis zur Bereitstellung.",
+              "2": "Umsetzung conversion-orientierter Websites fur den Verkauf von Musiklizenzen und Zusatzleistungen wie Late Checkout oder haustierfreundliche Optionen, wodurch Angebot und Nutzererlebnis klarer wurden.",
+              "3": "Wartung und technischer Support nach der Auslieferung, um die Stabilitat der Produktionslosungen sicherzustellen."
+            }
+          },
+          "1": {
+            "position": "E-Commerce",
+            "tasks": {
+              "0": "Verkauf von Abonnements fur Online-Dienste uber einen E-Commerce-Telegram-Bot, mit vollstandigem Projektmanagement, Entwicklung, Deployment und Kundensupport."
+            }
+          }
+        }
+      },
+      "2": {
+        "duration": "April 2023 - August 2023",
+        "jobs": {
+          "0": {
+            "position": "Ubersetzer",
+            "tasks": {
+              "0": "Ubersetzung vom Englischen ins Russische auf der Plattform Unbabel."
+            }
+          }
+        }
+      }
+    },
+    "education": {
+      "0": {
+        "establishment": "IUT de Marne-la-Vallee",
+        "duration": "2024-heute",
+        "precisions": {
+          "0": "Berufe im Bereich Multimedia und Internet (MMI);",
+          "1": "BUT Informatique;"
+        }
+      },
+      "1": {
+        "establishment": "BAC STI2D",
+        "duration": "2024",
+        "precisions": {}
+      },
+      "2": {
+        "establishment": "Olympiade in Belarus",
+        "duration": "2020",
+        "precisions": {
+          "0": "Diplom zweiten Grades fur das Bestehen der regionalen Runde der staatlichen Olympiade in sportlicher Programmierung und algorithmischer Problemlosung;"
+        }
+      },
+      "3": {
+        "establishment": "Sportmedaillen",
+        "duration": "2018-2019",
+        "precisions": {
+          "0": "Silbermedaille fur den 2. Platz bei einem von Gazprom organisierten Einzel-Tennisturnier im Jahr 2018;",
+          "1": "Silbermedaille fur den 2. Platz bei einem von Gazprom organisierten Doppel-Tennisturnier im Jahr 2019;"
+        }
+      }
+    },
+    "contact": {
+      "items": {
+        "0": {
+          "source": "Telefon",
+          "value": "+33 6 63 62 03 95"
+        },
+        "1": {
+          "source": "E-Mail",
+          "value": "alexdrobyszfr@gmail.com"
+        },
+        "2": {
+          "source": "Standort",
+          "value": "Champs-sur-Marne, Ile-de-France"
+        }
+      }
+    }
+  }
 }

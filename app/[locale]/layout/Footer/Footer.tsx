@@ -10,8 +10,11 @@ type FooterType = DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivEleme
 export const Footer = ({className}: FooterType)=> {
     return (
         <footer className={cn(styles.footer_section, className)}>
-            <div className="flex gap-2 max-[400px]:gap-6">
-                <Logo titleClassName="max-[400px]:hidden"/>
+            <div className="flex gap-2 items-center max-[400px]:gap-6">
+                <Logo 
+                    titleClassName="max-[400px]:hidden"
+                    isVisible={true}
+                />
                 <DownloadBntSample mode="mobile"/>
             </div>
             <SMbar SMList={SMList} />

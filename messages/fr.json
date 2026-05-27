@@ -1,3 +1,187 @@
 {
-    
+  "Metadata": {
+    "home": {
+      "title": "Parcours",
+      "description": "Ici, vous pouvez consulter le parcours qu'Alexander a accompli"
+    },
+    "resume": {
+      "title": "CV",
+      "description": "Ici, vous pouvez consulter le CV d'Alexander"
+    }
+  },
+  "Layout": {
+    "downloadCv": "Telecharger le CV",
+    "nav": {
+      "0": "Parcours",
+      "1": "Projets",
+      "2": "CV"
+    }
+  },
+  "Home": {
+    "hero": {
+      "title": "Site d'Alexander Drobysz",
+      "subtitle": "Je peux travailler avec",
+      "skills": {
+        "0": "Next.js",
+        "1": "React",
+        "2": "Tailwind",
+        "3": "Sass",
+        "4": "Framer Motion",
+        "5": "Docker",
+        "6": "Three.js",
+        "7": "Docker",
+        "8": "Amazon S3",
+        "9": "PHP",
+        "10": "Laravel",
+        "11": "Redis",
+        "12": "MySQL",
+        "13": "SQLite"
+      }
+    },
+    "timeline": {
+      "title": "Parcours chronologique",
+      "items": {
+        "0": {
+          "date": "2020",
+          "title": "Olympiade",
+          "description": "En 2019, j'ai rejoint un club de programmation ou je resolvais des problemes algorithmiques de differents niveaux, d'abord avec PascalABC puis avec C++. J'ai aussi participe a plusieurs olympiades au nom de l'ecole publique qui organisait le club. La derniere fois, j'ai atteint l'etape regionale, mais je n'avais pas assez de points pour acceder a la derniere etape republicaine. Ensuite, je n'ai plus frequente le club."
+        },
+        "1": {
+          "date": "mai 2024",
+          "title": "E-commerce, bots Telegram, freelance, autoformation",
+          "description": "Pendant l'ete 2024, j'ai commence a apprendre le developpement Python. J'ai etudie la syntaxe de base, PHP, Composer, les fonctions lambda, les decorateurs, les iterateurs, la POO, les comprehensions de listes, les expressions generatrices, Flask et Django. Pour lancer une petite activite commerciale, je me suis aussi plonge dans le developpement de bots Telegram. J'ai commence a creer des bots Telegram sur commande et pour mes projets personnels. Mon bot de dropshipping sur Telegram est @Planoise_test_bot."
+        },
+        "2": {
+          "date": "2024-aujourd'hui",
+          "title": "Entree a l'IUT de Marne-la-Vallee",
+          "description": "En 2024, j'ai rejoint la formation MMI. Ce programme combine plusieurs disciplines : marketing, graphisme, design et programmation. En programmation, nous avons etudie les bases de l'integration web avec HTML et CSS, les fondamentaux de JavaScript et PHP, ainsi que le fonctionnement du systeme de gestion de base de donnees MySQL."
+        },
+        "3": {
+          "date": "2025-aujourd'hui",
+          "title": "Autoformation",
+          "description": "Depuis fevrier 2025, je poursuis mon apprentissage autonome dans plusieurs domaines : front-end, back-end et DevOps. Pour le front-end, j'ai etudie React, Next.js, Tailwind, Sass, Framer Motion et Three.js. Pour construire des API, j'ai appris la POO en PHP, le framework Laravel et Redis. Pour le deploiement, j'ai etudie la conteneurisation avec Docker, decouvert Nginx pour le port forwarding, et commence a travailler avec les buckets Amazon S3 pour le stockage distant de fichiers media et audio. Depuis le debut de cette periode d'autoformation, fin fevrier 2025, j'ai cree deux projets avec Next.js."
+        }
+      }
+    },
+    "links": {
+      "serviceAlt": "Image du service",
+      "enjoy": "Bonne visite",
+      "linkedin": "Mon LinkedIn"
+    }
+  },
+  "Resume": {
+    "sections": {
+      "about": "A propos de moi",
+      "skills": "Competences",
+      "experience": "Experience",
+      "education": "Formation / Certificats"
+    },
+    "about": {
+      "text": "Developpeur freelance oriente vers les solutions e-commerce, avec une experience dans le developpement de bots Telegram et de sites web de vente. Realisation de projets de bout en bout pour PME : automatisation des ventes, gestion des paiements, developpement, deploiement et support client. Actuellement en premiere annee de BUT Informatique a l'IUT de Marne-la-Vallee, je developpe mes competences en programmation de maniere autonome."
+    },
+    "skills": {
+      "categories": {
+        "0": "Front-end",
+        "1": "Back-end",
+        "2": "DevOps"
+      }
+    },
+    "experience": {
+      "0": {
+        "duration": "mai 2026 - aujourd'hui",
+        "jobs": {
+          "0": {
+            "position": "Digital Harbor",
+            "tasks": {
+              "0": "Creation et gestion d'une boutique en ligne proposant des abonnements a des services d'IA populaires, regroupes en un seul abonnement."
+            }
+          },
+          "1": {
+            "position": "Ewenli Licenses",
+            "tasks": {
+              "0": "Creation et gestion d'une marketplace dediee aux licences de beats.",
+              "1": "Vente d'abonnements a un service de protection des droits d'auteur."
+            }
+          }
+        }
+      },
+      "1": {
+        "duration": "juin 2024 - aujourd'hui",
+        "jobs": {
+          "0": {
+            "position": "Developpeur freelance (bots Telegram & web e-commerce)",
+            "tasks": {
+              "0": "Developpement de bots Telegram e-commerce permettant la vente de services et de produits digitaux avec Telegram Bot API et paiements, ameliorant l'automatisation des ventes pour des PME.",
+              "1": "Conception et deploiement de solutions completes de vente en ligne, incluant la gestion des paiements, des abonnements et du support client, de la conception au deploiement.",
+              "2": "Realisation de sites web orientes conversion pour la vente de licences musicales et de services additionnels comme le check-out tardif ou les options animaux acceptes, ameliorant la clarte de l'offre et l'experience utilisateur.",
+              "3": "Maintenance et support technique apres livraison, garantissant la stabilite des solutions en production."
+            }
+          },
+          "1": {
+            "position": "E-commerce",
+            "tasks": {
+              "0": "Vente d'abonnements a des services en ligne via un bot Telegram e-commerce, avec gestion complete du projet, developpement, deploiement et support client."
+            }
+          }
+        }
+      },
+      "2": {
+        "duration": "avril 2023 - aout 2023",
+        "jobs": {
+          "0": {
+            "position": "Traducteur",
+            "tasks": {
+              "0": "Traduction de l'anglais vers le russe sur la plateforme Unbabel."
+            }
+          }
+        }
+      }
+    },
+    "education": {
+      "0": {
+        "establishment": "IUT de Marne-la-Vallee",
+        "duration": "2024-aujourd'hui",
+        "precisions": {
+          "0": "Metiers du multimedia et de l'Internet (MMI);",
+          "1": "BUT Informatique;"
+        }
+      },
+      "1": {
+        "establishment": "BAC STI2D",
+        "duration": "2024",
+        "precisions": {}
+      },
+      "2": {
+        "establishment": "Olympiade en Bielorussie",
+        "duration": "2020",
+        "precisions": {
+          "0": "Diplome de deuxieme degre pour le passage de la phase regionale de l'olympiade d'Etat en programmation sportive et resolution de problemes algorithmiques;"
+        }
+      },
+      "3": {
+        "establishment": "Medailles sportives",
+        "duration": "2018-2019",
+        "precisions": {
+          "0": "Medaille d'argent pour la 2e place au tournoi de tennis en simple organise par Gazprom en 2018;",
+          "1": "Medaille d'argent pour la 2e place au tournoi de tennis en double organise par Gazprom en 2019;"
+        }
+      }
+    },
+    "contact": {
+      "items": {
+        "0": {
+          "source": "numero",
+          "value": "+33 6 63 62 03 95"
+        },
+        "1": {
+          "source": "email",
+          "value": "alexdrobyszfr@gmail.com"
+        },
+        "2": {
+          "source": "localisation",
+          "value": "Champs-sur-Marne, Ile-de-France"
+        }
+      }
+    }
+  }
 }

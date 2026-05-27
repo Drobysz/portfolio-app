@@ -1,18 +1,20 @@
 "use client"
 
 import { Tab } from "./components/index";
-import { usePathname } from "next/navigation";
+import { usePathname } from "@/i18n/navigation";
 import { TabListProps } from "./TabList.props";
+import { useTranslations } from "next-intl";
 
 export const TabList = ({
 	setPosition,
 	setPositionClicked
 }: TabListProps)=> {
 	const pathname = usePathname();
+	const t = useTranslations("Layout");
 	const tabsList = [
-        { href: '/', label: 'History' },
-        { href: '/projects', label: 'Projects' },
-        { href: '/resume', label: 'Resumé' },
+        { href: '/', label: t('nav.0') },
+        { href: '/projects', label: t('nav.1') },
+        { href: '/resume', label: t('nav.2') },
     ];
 	return (
 		<>

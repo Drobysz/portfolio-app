@@ -15,5 +15,3 @@ export * from "./GlowingEffect";
 export * from "./CanvasRevealEffect";
 export * from "./Spotlight";
 export * from "./ArticleCV";
-export * from "./HeaderWrapper";
-export * from "./MenuBtn";

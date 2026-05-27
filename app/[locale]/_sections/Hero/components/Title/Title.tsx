@@ -1,12 +1,16 @@
 import { TypeWriterEffectText, ContainerTextFlip } from "@/components/index";
 import skills from "./skills.json";
 import cn from "classnames";
+import { useTranslations } from "next-intl";
 
 export const Title = ()=> {
+	const t = useTranslations("Home.hero");
+	const words = skills.map((_, index)=> t(`skills.${index}`));
+
 	return (
 		<div className="flex flex-col gap-6">
 			<TypeWriterEffectText>
-				Site of Alexander Drobysz
+				{t("title")}
 			</TypeWriterEffectText>
 			<div className={cn(
 				"flex gap-2",
@@ -17,10 +21,10 @@ export const Title = ()=> {
 					"bg-linear-to-br from-white",
 					"to-gray-400 bg-clip-text relative z-20"
 				)}>
-					I can work with
+					{t("subtitle")}
 				</p>
 				<ContainerTextFlip 
-					words={skills}
+					words={words}
 				/>
 			</div>
 		</div> 

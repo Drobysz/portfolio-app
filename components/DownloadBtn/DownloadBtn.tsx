@@ -5,6 +5,7 @@ import Link from "next/link";
 
 import { motion } from "framer-motion";
 import cn from "classnames";
+import s from "./style.module.scss";
 
 import { DonwloadBtnProps, Direction } from "./DownloadBtnProps";
 
@@ -51,25 +52,21 @@ export const DownloadBtn = ({
     <button
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
-      className={cn(
-        "relative flex rounded-full border  content-center bg-black/20 hover:bg-black/10 transition duration-500 dark:bg-white/20 items-center flex-col flex-nowrap gap-10 h-min justify-center overflow-visible p-px decoration-clone w-fit",
-      )}
+      className={s.body}
       {...props}
     >
       <div
         className={cn(
-          "w-auto text-white z-10 bg-black px-4 py-2 rounded-[inherit]",
+         s.children_body,
           className
         )}
       >
-        <Link href={href} download={downloadFileName}>
-          {children}
-        </Link>
+          <Link href={href} download={downloadFileName}>
+            {children}
+          </Link>
       </div>
       <motion.div
-        className={cn(
-          "flex-none inset-0 overflow-hidden absolute z-0 rounded-[inherit] blur-xs h-full w-full"
-        )}
+        className={s.moving_gradient}
         initial={{ background: movingMap[direction] }}
         animate={{
           background: hovered
@@ -78,7 +75,7 @@ export const DownloadBtn = ({
         }}
         transition={{ ease: "linear", duration: duration }}
       />
-      <div className="bg-black absolute z-1 flex-none inset-[2px] rounded-[100px]" />
+      <div className={s.mask} />
     </button>
   );
 }

@@ -1,6 +1,6 @@
 "use client"
 
-import { useWindowWidth } from "@/hooks/indexHooks";
+import { useWindowWidth } from "@/hooks";
 import Image from "next/image";
 import { useContext, useEffect } from "react";
 import { AppContext } from "@/app/[locale]/context/app.context";

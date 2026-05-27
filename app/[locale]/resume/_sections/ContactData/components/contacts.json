@@ -1,14 +1,11 @@
 [
 	{
-		"contactSource": "📱  number",
-		"contact": "+33 6 63 62 03 95"
+		"index": 0
 	},
 	{
-		"contactSource": "📫  email",
-		"contact": "alexdrobyszfr@gmail.com"
+		"index": 1
 	},
 	{
-		"contactSource": "📍  location",
-		"contact": "Champs-sur-Marne, Ile-de-France"
+		"index": 2
 	}
 ]

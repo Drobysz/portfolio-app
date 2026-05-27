@@ -2,7 +2,8 @@ import { useRef, useState } from "react";
 import { SMobj } from "./SMBlock.props";
 import { useSpring, useTransform } from "framer-motion";
 import Link from "next/link";
-import { SMtag, SMicon, SMbody } from "./components/index";
+import { SMtag, SMicon, SMbody } from "./_components";
+import { useWindowWidth } from "@/hooks";
 
 export const SMBlock = ({
     title,
@@ -12,6 +13,7 @@ export const SMBlock = ({
 }: SMobj)=> {
     const ref = useRef<HTMLDivElement>(null);
     const [hovered, setHovered] = useState(false);
+    const width = useWindowWidth();
 
     const distance = useTransform(mouseX, (horizontalCoordindate)=> {
         const border = ref.current?.getBoundingClientRect() ?? { x: 0, width: 0 };
@@ -19,16 +21,20 @@ export const SMBlock = ({
         return horizontalCoordindate - (border!.x + border!.width/2);
     });
 
+    const ranges = width > 400
+        ? { mouse: [-150, 0, 150], size: [50, 80, 50] }
+        : { mouse: [-150, 0, 150], size: [30, 50, 30] }
+
     const blockTransform = useTransform(
         distance,
-        [-150, 0, 150],
-        [50, 80, 50]
+        ranges.mouse,
+        ranges.size
     );
 
     const iconTransform = useTransform(
         distance,
-        [-150, 0, 150],
-        [50, 80, 50]
+        ranges.mouse,
+        ranges.size
     );
 
     const transition = {

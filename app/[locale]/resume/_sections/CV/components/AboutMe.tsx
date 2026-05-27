@@ -1,11 +1,13 @@
 import { ArticleCV } from "@/components/index";
-import about_me from "@/data_json/CV_Data/about_me.json";
+import { useTranslations } from "next-intl";
 
 export const AboutMe = ()=> {
+    const t = useTranslations("Resume");
+
     return (
-        <ArticleCV title="About me">
+        <ArticleCV title={t("sections.about")}>
             <p className="text-white/40 font-bold text-lg px-3 max-[700px]:text-sm max-[350px]:text-xs">
-                {about_me.text}
+                {t("about.text")}
             </p>
         </ArticleCV>
     );

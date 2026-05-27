@@ -1,5 +1,5 @@
 import { AppContext } from "@/app/[locale]/context/app.context";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { useContext, useEffect, useRef } from "react";
 import { Tabprops } from "@/components/NavBar/NavBarProps.interface";
 import styles from "./Tab.module.scss";

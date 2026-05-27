@@ -1,7 +1,10 @@
 import { DownloadBtn } from "@/components/index";
 import cn from "classnames";
+import { useTranslations } from "next-intl";
 
 export const DownloadBntSample = ({mode}: {mode: 'mobile' | 'desktop'})=> {
+	const t = useTranslations("Layout");
+
 	return (
 		<DownloadBtn
 			className={cn({

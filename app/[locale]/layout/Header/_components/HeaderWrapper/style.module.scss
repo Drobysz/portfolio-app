@@ -1,0 +1,12 @@
+@reference "tailwindcss";
+
+.body {
+    @apply h-14.5 px-4 py-2 flex justify-between items-center 
+        sticky z-40 top-0 rounded-4xl mx-auto;
+}
+
+@media (max-width: 445px) {
+    .body {
+        @apply h-12 py-0;
+    }
+}

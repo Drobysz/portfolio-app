@@ -1,30 +1,18 @@
 [
     {
-        "establishment": "IUT de Marne-la-Vallée",
-        "duration": "2024-présent",
-        "precisions": [ 
-            "Métiers du multimédia et de l'Internet (MMI);",
-            "BUT Informatique;" 
-        ]
+        "index": 0,
+        "precisions": [0, 1]
     },
     {
-        "establishment": "BAC STI2D",
-        "duration": "2024",
+        "index": 1,
         "precisions": []
     },
     {
-        "establishment": "Olympiade en Biélorussie",
-        "duration": "2020",
-        "precisions": [ 
-            "Diplôme de deuxième degré pour le passage de la phase régionale de l'olympiade d'état en programmation sportive (résolution de problèmes algorithmiques);" 
-        ]
+        "index": 2,
+        "precisions": [0]
     },
     {
-        "establishment": "Médailles sportives",
-        "duration": "2018-2019",
-        "precisions": [ 
-            "Médaille d'argent pour la 2ᵉ place au tournoi de tennis en simple organisé par Gazprom (2018);", 
-            "Médaille d'argent pour la 2ᵉ place au tournoi de tennis en paire organisé par Gazprom (2019);" 
-        ]
+        "index": 3,
+        "precisions": [0, 1]
     }
 ]

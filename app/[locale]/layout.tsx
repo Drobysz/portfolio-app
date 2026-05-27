@@ -1,8 +1,14 @@
-import { Header, Footer, SidebarMenu } from "./layout/index";
+import { 
+  Header, 
+  Footer, 
+  SidebarMenu,
+  LangBar
+} from "./layout/index";
 import styles from "./layout/GridLayout.module.scss"
 import { AppContextProvider } from "./context/app.context";
 import "./globals.css";
 import { hasLocale } from "next-intl";
+import { NextIntlClientProvider } from "next-intl";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 
@@ -23,11 +29,13 @@ export default async function RootLayout({
   }
 
   return (
-    <html lang="en">
+    <html lang={locale}>
       <body className='bg-[#0a0a0a]'>
+        <NextIntlClientProvider>
           <AppContextProvider>
             <SidebarMenu />
             <div className={styles.wrapper}>
+                <LangBar />
                 <Header className={styles.header}/>
                 <main className={styles.main}> 
                   {children}
@@ -35,6 +43,7 @@ export default async function RootLayout({
                 <Footer className={styles.footer}/>
             </div>
           </AppContextProvider>
+        </NextIntlClientProvider>
       </body>
     </html>
   );
