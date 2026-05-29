@@ -30,7 +30,7 @@ export default async function Page ({ params }: { params: Promise<{ project: str
 
     return (
         <Suspense fallback={<FullScreenSpin />}>
-            <ProjectPage pagename={project} />
+            <ProjectPage slug={project} />
         </Suspense>
     );
 };

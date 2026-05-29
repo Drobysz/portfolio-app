@@ -19,6 +19,7 @@ export const ProjectPage = ({ slug }: { slug: string })=> {
     };
 
     const project = projects.find(p => p.slug === slug);
+    console.log(projects)
 
     return (
         <>

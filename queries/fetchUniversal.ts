@@ -6,7 +6,7 @@ export const fetchUniversal = async (endpoint: Endpoint) => {
     const searchParams = new URLSearchParams({ item: endpoint });
 
     try {
-        const res = await fetch(`/api/get?${searchParams.toString()}`, {
+        const res = await fetch(`${process.env.NEXT_PUBLIC_APP_URL}/api/get?${searchParams.toString()}`, {
             method: "GET",
             headers: {
                 Accept: "application/json",

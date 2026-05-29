@@ -2,7 +2,7 @@
 
 import { useLayoutEffect, useRef, useState } from "react";
 import { RotatingIconProps } from "./RotatingIcon.interface";
-import { motion, useScroll, useTransform, useMotionValue } from "framer-motion";
+import { motion, useScroll, useTransform, useMotionValue, useMotionValueEvent } from "framer-motion";
 import cn from "classnames";
 import styles from "./RotatingIcon.module.scss";
 
@@ -13,6 +13,7 @@ export const RotatingIcon = ({ img, title }: RotatingIconProps)=> {
     const { scrollYProgress } = useScroll({target: ref});
 
     const [movementHeight, setMovementHeight] = useState(0);
+    const [isTransmissionX, setIsTransmissionX] = useState(false);
 
     useLayoutEffect(() => {
         if (!ref.current || !iconRef.current || !headingRef.current) return;
@@ -70,6 +71,18 @@ export const RotatingIcon = ({ img, title }: RotatingIconProps)=> {
         [50, -50]
     );
 
+    const transmissionX = useTransform(
+        [translateY, rotateX], 
+        ([y, rotate]) => {
+        const translate = y as number;
+
+        return translate >= movementHeight - 1 ? rotate : 0;
+    });
+
+    useMotionValueEvent(translateY, "change", (y)=> {
+        setIsTransmissionX(y >= movementHeight - 1);
+    });
+
     return (
         <section 
             ref={ref}
@@ -88,7 +101,7 @@ export const RotatingIcon = ({ img, title }: RotatingIconProps)=> {
                 onMouseEnter={()=> setHover(true)}
                 onMouseLeave={()=> setHover(false)}
                 style={{
-                    rotateY: isHovered ? rotateX : 0,
+                    rotateY: isHovered ? transmissionX : 0,
                     rotateX: rotateY,
                     scale: scale,
                     translateY: translateY
@@ -96,10 +109,10 @@ export const RotatingIcon = ({ img, title }: RotatingIconProps)=> {
             >
                 <motion.div 
                     className={cn(styles.icon_content, {
-                        ['scale-3d scale-105 perspective-distant']: isHovered
+                        ['scale-3d scale-105 perspective-distant']: isHovered && isTransmissionX
                     })}
                     style={{
-                        backgroundImage: `url(/project_images/${img}.png)`,
+                        backgroundImage: `url(${img})`,
                         backgroundSize: "cover",
                     }}
                 />
