@@ -2,7 +2,8 @@ import {
   Header, 
   Footer, 
   SidebarMenu,
-  LangBar
+  LangBar,
+  NotificationBar
 } from "./layout/index";
 import styles from "./layout/GridLayout.module.scss"
 import { AppContextProvider } from "./context/app.context";
@@ -34,6 +35,7 @@ export default async function RootLayout({
         <NextIntlClientProvider>
           <AppContextProvider>
             <SidebarMenu />
+            <NotificationBar />
             <div className={styles.wrapper}>
                 <LangBar />
                 <Header className={styles.header}/>

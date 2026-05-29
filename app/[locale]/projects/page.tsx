@@ -1,6 +1,6 @@
 import { ProjectsContextProvider } from "@/app/[locale]/projects/context/projects.context";
 import { BackgroundLines }  from "@/components/index";
-import { ProjectIntro, ProjectsSection } from "./_sections/index";
+import { ProjectIntro, ProjectsFeed } from "./_sections/index";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -12,7 +12,7 @@ export default function ProjectPage (){
     return (
         <ProjectsContextProvider>
             <ProjectIntro />
-            <ProjectsSection />
+            <ProjectsFeed />
             <BackgroundLines className="-z-10"/>
         </ProjectsContextProvider>
     );

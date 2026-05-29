@@ -1,0 +1,6 @@
+@reference "tailwindcss";
+
+.feed_layout {
+    @apply relative grid grid-cols-[repeat(auto-fit,minmax(150px,200px))] 
+        justify-center gap-6 p-5 mb-30;
+}

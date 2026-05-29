@@ -1,42 +1,48 @@
 'use client'
 
-import { createContext, Dispatch, ReactNode, SetStateAction, useEffect, useState } from "react";
-import projects from "@/data_json/project_intro_info.json";
-
-export interface ProjectProps {
-    title:       string;
-    description: string;
-    img:         string;
-    pagename:    string;
-};
-
-interface ProjectsContextProps {
-    project:      ProjectProps;
-    currentIndex: number;
-    setHover:     Dispatch<SetStateAction<boolean>>;
-    setIndex:     Dispatch<SetStateAction<number>>;
-};
+import { createContext, ReactNode, useContext, useEffect, useState } from "react";
+import { ProjectsContextProps } from "./projects.interface";
+import { fetchProjects } from "@/queries/fetchProjects";
+import useSWR from "swr";
+import { AppContext } from "../../context/app.context";
 
 export const ProjectsContext = createContext<ProjectsContextProps>({
-    project: {
-        title:       projects[0].title,
-        description: projects[0].description,
-        img:         projects[0].img,
-        pagename:    projects[0].pagename,
-    },
+    projects: [],
     currentIndex: 0,
+    areProjectsLoading: false,
 
     setHover: ()=> {},
-    setIndex: ()=> {}
+    setIndex: ()=> {},
+    mutateProjects: async () => undefined,
 });
 
 export const ProjectsContextProvider = ({children}: {children: ReactNode})=> {
     const [ currentIndex, setIndex ] = useState(0);
     const [ isHovered, setHover ] = useState(false);
-    const project = projects[currentIndex];
     const interval = isHovered ? 1000000 : 7000;
 
+    const { setNotification } = useContext(AppContext);
+
+    const {
+		data: projects,
+		error: projectsError,
+		isLoading: areProjectsLoading,
+		mutate: mutateProjects
+	} = useSWR(
+		"global-projects",
+		fetchProjects,
+		{
+			refreshInterval: 10 * 60 * 1000,
+			dedupingInterval: 10 * 60 * 1000,
+            shouldRetryOnError: (error) => error?.status !== 401,
+		}
+	);
+
+    console.log(projects)
+
     useEffect(()=> {
+        if (!projects) return;
+
         const projectInterval = setInterval(()=> {
             setIndex( i=> (i + 1) % projects.length );
 
@@ -44,13 +50,26 @@ export const ProjectsContextProvider = ({children}: {children: ReactNode})=> {
         return ()=> clearInterval(projectInterval);
     }, [interval]);
 
+    useEffect(()=> {
+        if (projectsError === undefined) return;
+
+        setNotification({
+            status: "error",
+            text: "Failed to load projects"
+        });
+     }, [projectsError, setNotification]);
+
     return (
         <ProjectsContext.Provider
             value={{
-                project:      project,
+                projects:      projects,
                 currentIndex: currentIndex,
+                projectsError,
+                areProjectsLoading,
+
                 setHover,
                 setIndex,
+                mutateProjects
             }}
         >
             {children}

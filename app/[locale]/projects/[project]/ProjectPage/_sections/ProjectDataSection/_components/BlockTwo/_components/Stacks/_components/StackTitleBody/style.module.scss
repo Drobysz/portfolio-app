@@ -1,0 +1,7 @@
+@reference "tailwindcss";
+
+.title {
+    @apply w-fit text-white/70 font-bold
+        text-xl max-[650px]:text-lg
+        max-[520px]:text-sm;
+}

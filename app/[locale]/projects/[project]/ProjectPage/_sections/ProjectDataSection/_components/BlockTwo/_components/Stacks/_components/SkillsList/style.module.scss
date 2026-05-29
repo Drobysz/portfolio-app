@@ -1,0 +1,6 @@
+@reference "tailwindcss";
+
+.skill_list {
+    @apply text-white/40 text-lg font-extrabold 
+        italic max-[650px]:text-sm max-[520px]:text-xs;
+}

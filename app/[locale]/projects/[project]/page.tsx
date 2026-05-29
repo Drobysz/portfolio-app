@@ -1,13 +1,15 @@
-import projects from "@/data_json/project_intro_info.json";
 import { Suspense } from "react";
-import { ProjectPage } from "./page/ProjectPage"; 
+import { ProjectPage } from "./ProjectPage/ProjectPage";
 import { FullScreenSpin } from "@/components/index";
-import { generateProjectMetaData } from "./metadata";
 import { Metadata } from "next";
+import { fetchProjects } from "@/queries/fetchProjects";
+import { Project } from "@/interfaces";
 
 export async function generateStaticParams() {
+    const projects: Project[] = await fetchProjects();
+
     return projects.map(p=> ({ 
-        project: p.pagename 
+        project: p.slug
     }));   
 };
 
@@ -18,7 +20,9 @@ export async function generateMetadata({
     params: { project: string } 
 }): Promise<Metadata> {
     const { project } = await(params)
-    return generateProjectMetaData(project);
+    return {
+        title: project
+    };
 }
 
 export default async function Page ({ params }: { params: Promise<{ project: string; }>  }) {    

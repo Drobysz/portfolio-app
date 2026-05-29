@@ -1,0 +1,18 @@
+@reference "tailwindcss";
+
+.body {
+    @apply relative cursor-pointer w-full 
+        place-content-center border-4 border-neutral-600 
+        h-25 overflow-hidden rounded-3xl;
+}
+
+.background_of_selected {
+    @apply absolute inset-0 z-10 hover:scale-110 
+        duration-300 transition-all;
+}
+
+.title_of_selected {
+    @apply relative text-xl text-center z-50 
+        text-white px-3 py-0.5 rounded-lg 
+        transition-all duration-300;
+}

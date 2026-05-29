@@ -3,7 +3,7 @@
 import { CursorPosition } from "./NavBarProps.interface";
 import { DetailedHTMLProps, HTMLAttributes, useState } from "react";
 import cn from "classnames";
-import { TabList, Cursor } from "./components/index";
+import { TabList, Cursor } from "./_components";
 
 type NavbarType = DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement>;
 
