@@ -6,7 +6,7 @@ async function fetchReserves(endpoint: string) {
 	const timeoutId = setTimeout(() => controller.abort(), 15_000);
 
 	try {
-        return await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/${endpoint}`, {
+        return await fetch(`${process.env.NEXT_PUBLIC_API_URL}/portfolio_api/${endpoint}`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
