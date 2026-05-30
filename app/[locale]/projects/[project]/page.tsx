@@ -2,21 +2,8 @@ import { Suspense } from "react";
 import { ProjectPage } from "./ProjectPage/ProjectPage";
 import { FullScreenSpin } from "@/components/index";
 import { Metadata } from "next";
-import { fetchProjectsFromApi } from "@/queries/fetchProjects";
 
-export async function generateStaticParams() {
-    try {
-        const projects = await fetchProjectsFromApi();
-
-        return projects.map(p=> ({
-            project: p.slug
-        }));
-    } catch (error) {
-        const message = error instanceof Error ? error.message : "Unknown error";
-        console.warn(`Failed to fetch project params from API during build: ${message}`);
-        return [];
-    }
-};
+export const dynamic = "force-dynamic";
 
 export async function generateMetadata({
     params
