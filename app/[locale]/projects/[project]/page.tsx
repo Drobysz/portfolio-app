@@ -2,15 +2,20 @@ import { Suspense } from "react";
 import { ProjectPage } from "./ProjectPage/ProjectPage";
 import { FullScreenSpin } from "@/components/index";
 import { Metadata } from "next";
-import { fetchProjects } from "@/queries/fetchProjects";
-import { Project } from "@/interfaces";
+import { fetchProjectsFromApi } from "@/queries/fetchProjects";
 
 export async function generateStaticParams() {
-    const projects: Project[] = await fetchProjects();
+    try {
+        const projects = await fetchProjectsFromApi();
 
-    return projects.map(p=> ({ 
-        project: p.slug
-    }));   
+        return projects.map(p=> ({
+            project: p.slug
+        }));
+    } catch (error) {
+        const message = error instanceof Error ? error.message : "Unknown error";
+        console.warn(`Failed to fetch project params from API during build: ${message}`);
+        return [];
+    }
 };
 
 export async function generateMetadata({
