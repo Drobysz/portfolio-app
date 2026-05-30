@@ -48,3 +48,9 @@
         @apply translate-y-[-80%] ;
     }
 }
+
+@media (max-width: 620px) {
+    .switcher {
+        @apply hidden;
+    }
+}

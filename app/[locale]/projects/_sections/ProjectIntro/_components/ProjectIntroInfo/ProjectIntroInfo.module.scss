@@ -1,21 +1,59 @@
 @reference "tailwindcss";
 
-.proj_info_dection {
+.proj_info_section {
 	@apply flex flex-col
-		z-30 gap-8 w-[35vw]
-		max-[560px]:gap-4;
+		z-30 gap-8 w-[35vw];
 }
 
 .title {
-	@apply text-white text-5xl font-bold
-		max-[860px]:text-3xl
-		max-[560px]:text-xl;
+	@apply text-white text-5xl font-bold;
 }
 
 .description {
 	@apply text-transparent font-extralight
-		bg-gradient-to-br from-white
-		to-gray-400 bg-clip-text
-		max-[860px]:text-sm
-		max-[560px]:text-xs;
+		bg-linear-to-br from-white
+		to-gray-400 bg-clip-text;
+}
+
+@media (max-width: 860px) {
+	.proj_info_section {
+		@apply gap-6;
+	}
+
+	.title {
+		@apply text-3xl;
+	}
+
+	.btn,
+	.description {
+		@apply text-sm;
+	}
+
+	.btn {
+		@apply rounded-xl
+			px-2 py-1.5;
+	}
+}
+
+@media (max-width: 560px) {
+	.proj_info_section {
+		@apply gap-4;
+	}
+
+	.title {
+		@apply text-xl;
+	}
+
+	.proj_info_dection {
+		@apply gap-4;
+	}
+
+	.btn,
+	.description {
+		@apply text-xs;
+	}
+
+	.btn {
+		@apply rounded-lg;
+	}
 }

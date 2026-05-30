@@ -13,6 +13,9 @@ export const ProjectPanel = forwardRef<HTMLDivElement, ProjectPanelProps>(
         const projectTag = currentProject.tag
             ? currentProject.tag.toLocaleLowerCase().trim()
             : null;
+        const limitedTitle = currentProject.title.length > 18 
+            ? currentProject.title.slice(0, 18) + "..."
+            : currentProject.title;
 
         const setRefs = (node: HTMLDivElement | null) => {
             localRef.current = node;
@@ -93,7 +96,7 @@ export const ProjectPanel = forwardRef<HTMLDivElement, ProjectPanelProps>(
                 </div>
                 {currentIndex !== index &&
                     <p className={s.subtitle}>
-                        {currentProject.title}
+                        {limitedTitle}
                     </p>
                 }
             </div>

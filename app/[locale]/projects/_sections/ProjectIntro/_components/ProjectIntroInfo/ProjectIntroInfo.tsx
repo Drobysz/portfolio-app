@@ -3,7 +3,7 @@ import { variantsTextContent } from "../AnimationProps";
 import { avenir, bagel_fat_one } from "@/fonts/fonts";
 import cn from "classnames";
 import { CustomBtn, FullScreenSpin } from "@/components/index";
-import styles from "./ProjectIntroInfo.module.scss";
+import s from "./ProjectIntroInfo.module.scss";
 import { Project } from "@/interfaces";
 
 export const ProjectIntroInfo = ({
@@ -24,20 +24,20 @@ export const ProjectIntroInfo = ({
 			{ project && ( 
 				<motion.div 
 					key={`intro-${project.slug}`}
-					className={styles.proj_info_dection}
+					className={s.proj_info_section}
 					variants={variantsTextContent}
 					initial="hidden"
 					animate="visible"
 					exit="exit"
 				>
 					<h2 className={cn(
-						styles.title,
+						s.title,
 						bagel_fat_one.className
 					)}>
 						{title}
 					</h2>
 					<p className={cn(
-						styles.description,
+						s.description,
 						avenir.className
 					)}>
 						{short_description}
@@ -45,6 +45,7 @@ export const ProjectIntroInfo = ({
 					<CustomBtn
 						color="white"
 						link={`/projects/${slug}`}
+						className={s.btn}
 					>
 						Learn more
 					</CustomBtn>
