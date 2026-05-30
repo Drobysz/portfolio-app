@@ -44,9 +44,8 @@ export const ProjectsContextProvider = ({children}: {children: ReactNode})=> {
 
         }, interval);
 
-        console.log(currentIndex)
         return ()=> clearInterval(projectInterval);
-    }, [interval, projects.length]);
+    }, [interval, projects.length, currentIndex]);
 
     useEffect(()=> {
         if (!projectsError) return;

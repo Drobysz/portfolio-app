@@ -1,6 +1,7 @@
 import { ProjectsContext } from "@/app/[locale]/projects/context/projects.context";
 import { ProjectPanelProps } from "./ProjectPanel.props";
 import { forwardRef, useContext, useLayoutEffect, useRef } from "react";
+import { ProjectTag } from "@/components";
 import cn from "classnames"
 import { impact } from "@/fonts/fonts";
 import s from "./style.module.scss";
@@ -9,6 +10,9 @@ export const ProjectPanel = forwardRef<HTMLDivElement, ProjectPanelProps>(
     ({ currentProject, index, setPosition }, forwardedRef)=> {
         const { setIndex, currentIndex } = useContext(ProjectsContext);
         const localRef = useRef<HTMLDivElement>(null);
+        const projectTag = currentProject.tag
+            ? currentProject.tag.toLocaleLowerCase().trim()
+            : null;
 
         const setRefs = (node: HTMLDivElement | null) => {
             localRef.current = node;
@@ -70,14 +74,22 @@ export const ProjectPanel = forwardRef<HTMLDivElement, ProjectPanelProps>(
                         className={s.background_of_selected}
                         style={background}
                     />
-                    {currentIndex === index && (
+                    {currentIndex !== index 
+                        &&
+                    projectTag !== null &&
+                        <ProjectTag 
+                            className={s.tag}
+                            tagName={projectTag}
+                        />
+                    }
+                    {currentIndex === index && 
                         <h3 className={cn(
                             s.title_of_selected, 
                             impact.className
                         )}>
                             {currentProject.title}
                         </h3>
-                    )}
+                    }
                 </div>
                 {currentIndex !== index &&
                     <p className={s.subtitle}>
