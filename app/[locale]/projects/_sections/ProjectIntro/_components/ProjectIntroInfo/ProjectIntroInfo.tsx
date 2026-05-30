@@ -2,7 +2,7 @@ import { AnimatePresence, motion } from "framer-motion"
 import { variantsTextContent } from "../AnimationProps";
 import { avenir, bagel_fat_one } from "@/fonts/fonts";
 import cn from "classnames";
-import { CustomBtn } from "@/components/index";
+import { CustomBtn, FullScreenSpin } from "@/components/index";
 import styles from "./ProjectIntroInfo.module.scss";
 import { Project } from "@/interfaces";
 
@@ -11,6 +11,8 @@ export const ProjectIntroInfo = ({
 }: {
 	project: Project
 })=> {
+	if (!project) return <FullScreenSpin />
+
 	const { 
 		title,
 		short_description,

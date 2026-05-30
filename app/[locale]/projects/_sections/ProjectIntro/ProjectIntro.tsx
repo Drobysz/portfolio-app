@@ -29,7 +29,7 @@ export const ProjectIntro = ()=> {
         <>
             { !projectsError && !areProjectsLoading && projects && 
                 <section className={cn(
-                    "relative pt-8 mb-15",
+                    "relative pt-8",
                     "h-[55vh] flex items-center"
                 )}>
                     <ProjectIntroInfo 

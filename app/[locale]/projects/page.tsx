@@ -9,10 +9,10 @@ export const metadata: Metadata = {
 
 export default function ProjectPage (){
     return (
-        <>
+        <div className="flex flex-col gap-15">
             <ProjectIntro />
             <ProjectsFeed />
             <BackgroundLines className="-z-10"/>
-        </>
+        </div>
     );
 };

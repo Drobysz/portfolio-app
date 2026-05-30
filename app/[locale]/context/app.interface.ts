@@ -7,12 +7,21 @@ export interface AppNotification {
     text: string;
 }
 
+export interface Coords {
+    x: number;
+    y: number;
+}
+
 export interface AppContextProps {
     isVisible: boolean;
     isMenuOpened: boolean;
     notification: AppNotification;
+    mouseGuide: Coords | null;
+    mouseText: string;
 
-    setVisible: Dispatch<SetStateAction<boolean>>
-    setMenuOpened: Dispatch<SetStateAction<boolean>>
+    setVisible: Dispatch<SetStateAction<boolean>>;
+    setMenuOpened: Dispatch<SetStateAction<boolean>>;
     setNotification: Dispatch<SetStateAction<AppNotification>>;
+    setMouseGuide: Dispatch<SetStateAction<Coords | null>>;
+    setMouseText: Dispatch<SetStateAction<string>>;
 };

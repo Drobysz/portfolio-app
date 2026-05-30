@@ -1,18 +1,37 @@
 @reference "tailwindcss";
 
 .body {
-    @apply relative cursor-pointer w-full 
-        place-content-center border-4 border-neutral-600 
-        h-25 overflow-hidden rounded-3xl;
+    @apply relative cursor-pointer 
+        place-content-center border-2 border-white
+        h-60 w-40 overflow-hidden rounded-3xl shrink-0;
 }
 
 .background_of_selected {
-    @apply absolute inset-0 z-10 hover:scale-110 
+    @apply absolute inset-0 z-10 hover:scale-103 
         duration-300 transition-all;
 }
 
 .title_of_selected {
-    @apply relative text-xl text-center z-50 
+    @apply relative text-xl text-center z-20 
         text-white px-3 py-0.5 rounded-lg 
         transition-all duration-300;
+
+}
+
+.subtitle {
+    @apply text-gray-400 pl-2;
+}
+
+@media (max-width: 780px) {
+    .body {
+        @apply h-30 w-20 rounded-xl;
+    }
+
+    .title_of_selected {
+        @apply text-[0.625rem];
+    }
+
+    .subtitle {
+        @apply text-xs pl-1;
+    }
 }

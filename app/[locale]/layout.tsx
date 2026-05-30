@@ -3,7 +3,8 @@ import {
   Footer, 
   SidebarMenu,
   LangBar,
-  NotificationBar
+  NotificationBar,
+  MouseGuide
 } from "./layout/index";
 import styles from "./layout/GridLayout.module.scss"
 import { AppContextProvider } from "./context/app.context";
@@ -36,6 +37,7 @@ export default async function RootLayout({
           <AppContextProvider>
             <SidebarMenu />
             <NotificationBar />
+            <MouseGuide />
             <div className={styles.wrapper}>
                 <LangBar />
                 <Header className={styles.header}/>

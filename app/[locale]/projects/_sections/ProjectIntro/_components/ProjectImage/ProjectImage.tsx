@@ -3,12 +3,15 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useContext } from "react";
 import { variantsBackgroundContent } from "../AnimationProps";
 import { Project } from "@/interfaces";
+import { FullScreenSpin } from "@/components";
 
 export const ProjectImage = ({
 	project
 }: {
 	project: Project
 })=> {
+	if (!project) return <FullScreenSpin />;
+
 	return (
 		<AnimatePresence>
 			<motion.div 

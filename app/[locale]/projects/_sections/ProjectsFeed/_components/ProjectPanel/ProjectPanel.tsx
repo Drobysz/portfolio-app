@@ -1,92 +1,92 @@
 import { ProjectsContext } from "@/app/[locale]/projects/context/projects.context";
 import { ProjectPanelProps } from "./ProjectPanel.props";
-import { useContext, useLayoutEffect, useRef } from "react";
-import { useRouter } from "@/i18n/navigation";
+import { forwardRef, useContext, useLayoutEffect, useRef } from "react";
 import cn from "classnames"
 import { impact } from "@/fonts/fonts";
 import s from "./style.module.scss";
 
-export const ProjectPanel = ({ currentProject, index, setPosition }: ProjectPanelProps)=> {
-    const { setIndex, setHover, currentIndex } = useContext(ProjectsContext);
-    const ref = useRef<HTMLDivElement>(null);
-    const router = useRouter();
+export const ProjectPanel = forwardRef<HTMLDivElement, ProjectPanelProps>(
+    ({ currentProject, index, setPosition }, forwardedRef)=> {
+        const { setIndex, currentIndex } = useContext(ProjectsContext);
+        const localRef = useRef<HTMLDivElement>(null);
 
-    const background = 
-        currentIndex !== index 
-        ?
-            {
-                backgroundImage:    `url(${currentProject.cover_image_url})`,
-                backgroundSize:     "cover",
-                backgroundPosition: "center",
+        const setRefs = (node: HTMLDivElement | null) => {
+            localRef.current = node;
+            
+            if (typeof forwardedRef === "function") {
+                forwardedRef(node);
+            } else if (forwardedRef) {
+                forwardedRef.current = node;
             }
-        :
-            { backgroundColor: "#262626" }
-
-    useLayoutEffect(() => {
-        const el = ref.current;
-        if (!el) return;
-
-        const update = () => {
-            if (index === currentIndex)
-                setPosition({
-                    left:   el.offsetLeft,
-                    top:    el.offsetTop,
-                    width:  el.offsetWidth,
-                    height: el.offsetHeight,
-                });
         };
 
-        if (index === currentIndex) update();
+        const background = 
+            currentIndex !== index 
+            ?
+                {
+                    backgroundImage:    `url(${currentProject.cover_image_url})`,
+                    backgroundSize:     "cover",
+                    backgroundPosition: "center",
+                }
+            :
+                { backgroundColor: "#171717" }
 
-        const ro = new ResizeObserver(update);
-        ro.observe(el);
-        window.addEventListener("resize", update);
-        window.addEventListener("scroll", update, true);
+        useLayoutEffect(() => {
+            const el = localRef.current;
+            if (!el) return;
 
-        return () => {
-            ro.disconnect();
-            window.removeEventListener("resize", update);
-            window.removeEventListener("scroll", update, true);
-        };
-    }, [currentIndex, index, setPosition]);
+            const update = () => {
+                if (index === currentIndex)
+                    setPosition({
+                        left:   el.offsetLeft,
+                        top:    el.offsetTop,
+                        width:  el.offsetWidth,
+                        height: el.offsetHeight,
+                    });
+            };
 
-    const handleInteraction = (action: true | false | "clicked")=> {
-        switch (action) {
-            case true:
-                setHover(true);
-                setIndex(index)    
-                break;
+            if (index === currentIndex) update();
 
-            case false:
-                setHover(false);
-                break;
+            const ro = new ResizeObserver(update);
+            ro.observe(el);
+            window.addEventListener("resize", update);
+            window.addEventListener("scroll", update, true);
 
-            case "clicked":
-                router.push(`/projects/${currentProject.slug}`)    
-                break;
-        }
-    }; 
+            return () => {
+                ro.disconnect();
+                window.removeEventListener("resize", update);
+                window.removeEventListener("scroll", update, true);
+            };
+        }, [currentIndex, index, setPosition]);
 
-    return (
-        <div
-            ref={ref}
-            className={cn(s.body, "group")}
-            onMouseEnter={()=> handleInteraction(true)}
-            onMouseLeave={()=> handleInteraction(false)}
-            onClick={()=> handleInteraction("clicked")}
-        >
-            <div 
-                className={s.background_of_selected}
-                style={background}
-            />
-            { currentIndex === index && (
-                <h3 className={cn(
-                    s.title_of_selected, 
-                    impact.className
-                )}>
-                    {currentProject.title}
-                </h3>
-            )}
-        </div>
-    );
-};
+        return (
+            <div className="flex flex-col gap-2">
+                <div
+                    ref={setRefs}
+                    className={cn(s.body, "group")}
+                    onClick={()=> setIndex(index)}
+                >
+                    <div 
+                        className={s.background_of_selected}
+                        style={background}
+                    />
+                    {currentIndex === index && (
+                        <h3 className={cn(
+                            s.title_of_selected, 
+                            impact.className
+                        )}>
+                            {currentProject.title}
+                        </h3>
+                    )}
+                </div>
+                {currentIndex !== index &&
+                    <p className={s.subtitle}>
+                        {currentProject.title}
+                    </p>
+                }
+            </div>
+        );
+    }
+);
+
+ProjectPanel.displayName = "ProjectPanel";

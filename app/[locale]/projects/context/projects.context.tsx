@@ -5,26 +5,25 @@ import { ProjectsContextProps } from "./projects.interface";
 import { fetchProjects } from "@/queries/fetchProjects";
 import useSWR from "swr";
 import { AppContext } from "../../context/app.context";
+import { Project } from "@/interfaces";
 
 export const ProjectsContext = createContext<ProjectsContextProps>({
     projects: [],
     currentIndex: 0,
     areProjectsLoading: false,
 
-    setHover: ()=> {},
     setIndex: ()=> {},
     mutateProjects: async () => undefined,
 });
 
 export const ProjectsContextProvider = ({children}: {children: ReactNode})=> {
     const [ currentIndex, setIndex ] = useState(0);
-    const [ isHovered, setHover ] = useState(false);
-    const interval = isHovered ? 1000000 : 7000;
+    const interval = 15000;
 
     const { setNotification } = useContext(AppContext);
 
     const {
-		data: projects,
+		data: projects = [],
 		error: projectsError,
 		isLoading: areProjectsLoading,
 		mutate: mutateProjects
@@ -39,35 +38,38 @@ export const ProjectsContextProvider = ({children}: {children: ReactNode})=> {
 	);
 
     console.log(projects)
+    const repeatedProjects = Array(5).fill(projects).flat();
 
     useEffect(()=> {
-        if (!projects) return;
+        if (!repeatedProjects) return;
 
         const projectInterval = setInterval(()=> {
-            setIndex( i=> (i + 1) % projects.length );
+            setIndex( i=> (i + 1) % repeatedProjects.length );
 
         }, interval);
+
+        console.log(currentIndex)
         return ()=> clearInterval(projectInterval);
-    }, [interval]);
+    }, [interval, repeatedProjects.length]);
 
     useEffect(()=> {
-        if (projectsError === undefined) return;
+        if (!projectsError) return;
 
         setNotification({
             status: "error",
             text: "Failed to load projects"
         });
-     }, [projectsError, setNotification]);
+    }, [projectsError, setNotification]);
 
     return (
         <ProjectsContext.Provider
             value={{
-                projects:      projects,
+                projects:     repeatedProjects,
+                // projects: projects,
                 currentIndex: currentIndex,
                 projectsError,
                 areProjectsLoading,
 
-                setHover,
                 setIndex,
                 mutateProjects
             }}

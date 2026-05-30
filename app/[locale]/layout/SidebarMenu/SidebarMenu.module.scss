@@ -1,8 +1,8 @@
 @reference "tailwindcss";
 
 .is_opened {
-    @apply fixed inset-0 z-30
-        h-[100vh] w-[100vw] flex flex-col items-end
+    @apply fixed inset-0 z-40
+        h-screen w-screen flex flex-col items-end
         justify-center p-7 text-white text-6xl
         max-[670px]:text-5xl max-[670px]:p-5
         max-[520px]:text-4xl max-[520px]:p-3;

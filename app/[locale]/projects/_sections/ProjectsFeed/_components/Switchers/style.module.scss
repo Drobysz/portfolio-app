@@ -1,0 +1,39 @@
+@reference "tailwindcss";
+
+.space {
+    @apply absolute h-full w-30
+        flex items-center z-20;
+}
+
+.shadow_left {
+    background:
+        linear-gradient(
+            -90deg,
+            rgba(10, 10, 10, 0) 0%,
+            rgba(10, 10, 10, 0.7) 50%,
+            rgba(10, 10, 10, 1) 100%,
+        );
+}
+
+.shadow_right {
+    background:
+        linear-gradient(
+            90deg,
+            rgba(10, 10, 10, 0) 0%,
+            rgba(10, 10, 10, 0.7) 50%,
+            rgba(10, 10, 10, 1) 100%,
+        );
+}
+
+.switcher {
+    @apply p-2 duration-200 transition-all w-fit
+        hover:opacity-85 active:scale-95 ease-in
+        rounded-full bg-gray-400 -translate-y-1/2 
+        text-gray-800 cursor-pointer;
+}
+
+@media (max-width: 780px) {
+    .switcher {
+        @apply translate-y-[-80%] ;
+    }
+}

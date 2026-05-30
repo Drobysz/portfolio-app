@@ -8,7 +8,6 @@ export interface ProjectsContextProps {
     projectsError?:     Error;
     currentIndex:       number;
 
-    setHover:        Dispatch<SetStateAction<boolean>>;
     setIndex:        Dispatch<SetStateAction<number>>;
     mutateProjects:  KeyedMutator<Project[]>;
 };
