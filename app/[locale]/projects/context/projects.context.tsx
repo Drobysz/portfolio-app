@@ -5,7 +5,6 @@ import { ProjectsContextProps } from "./projects.interface";
 import { fetchProjects } from "@/queries/fetchProjects";
 import useSWR from "swr";
 import { AppContext } from "../../context/app.context";
-import { Project } from "@/interfaces";
 
 export const ProjectsContext = createContext<ProjectsContextProps>({
     projects: [],
@@ -37,20 +36,17 @@ export const ProjectsContextProvider = ({children}: {children: ReactNode})=> {
 		}
 	);
 
-    console.log(projects)
-    const repeatedProjects = Array(5).fill(projects).flat();
-
     useEffect(()=> {
-        if (!repeatedProjects) return;
+        if (!projects) return;
 
         const projectInterval = setInterval(()=> {
-            setIndex( i=> (i + 1) % repeatedProjects.length );
+            setIndex( i=> (i + 1) % projects.length );
 
         }, interval);
 
         console.log(currentIndex)
         return ()=> clearInterval(projectInterval);
-    }, [interval, repeatedProjects.length]);
+    }, [interval, projects.length]);
 
     useEffect(()=> {
         if (!projectsError) return;
@@ -64,8 +60,7 @@ export const ProjectsContextProvider = ({children}: {children: ReactNode})=> {
     return (
         <ProjectsContext.Provider
             value={{
-                projects:     repeatedProjects,
-                // projects: projects,
+                projects:     projects,
                 currentIndex: currentIndex,
                 projectsError,
                 areProjectsLoading,

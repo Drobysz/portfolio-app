@@ -3,18 +3,29 @@ import { useEffect, useState } from "react";
 export const useMouseCoordinates = ()=> {
     const [mousePosition, setMousePosition] = useState<{x: number , y: number}>({ x: 0, y: 0 });
 
-    const updateMousePosition = (e: MouseEvent) => {
-        setMousePosition({ x: e.clientX, y: e.clientY });
-    };
-
     useEffect(() => {
+        let animationFrame: number | null = null;
+
         const handleMouseMove = (e: MouseEvent) => {
-            updateMousePosition(e);
+            const nextPosition = { x: e.pageX, y: e.pageY };
+
+            if (animationFrame) {
+                window.cancelAnimationFrame(animationFrame);
+            }
+
+            animationFrame = window.requestAnimationFrame(() => {
+                setMousePosition(nextPosition);
+                animationFrame = null;
+            });
         };
 
-        window.addEventListener("mousemove", handleMouseMove);
+        window.addEventListener("mousemove", handleMouseMove, { passive: true });
 
         return () => {
+            if (animationFrame) {
+                window.cancelAnimationFrame(animationFrame);
+            }
+
             window.removeEventListener("mousemove", handleMouseMove);
         };
     }, []);
