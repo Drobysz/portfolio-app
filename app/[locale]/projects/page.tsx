@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function ProjectPage (){
     return (
-        <div className="flex flex-col gap-15">
+        <div className="flex flex-col gap-15 max-[780px]:gap-5">
             <ProjectIntro />
             <ProjectsFeed />
             <BackgroundLines className="-z-10"/>

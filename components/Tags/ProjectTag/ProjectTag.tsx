@@ -29,7 +29,7 @@ export const ProjectTag = ({
                 className,
                 s.body, {
                     ["text-gray-900 bg-white"]: !isNotDefaultStyle,
-                    ["text-white"]: isNotDefaultStyle,
+                    ["text-white font-bold"]: isNotDefaultStyle,
                     ["bg-blue-600"]: tagName == "soon",
                     ["bg-amber-400"]: tagName == "new",
                     ["bg-red-600"]: tagName == "suspended"
