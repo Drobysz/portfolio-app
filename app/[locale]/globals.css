@@ -4,7 +4,17 @@ main,
 body {
   scrollbar-width: none;
   -ms-overflow-style: none;
+  
 }
+
+/* Cursor customisation */
+body {
+    cursor: url('/cursor/mouse.png') 0 0, pointer;
+};
+
+.cursor-pointer {
+    cursor: url('/cursor/pointer.png') 0 0, pointer;
+};
 
 main::-webkit-scrollbar,
 body::-webkit-scrollbar {

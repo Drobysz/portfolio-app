@@ -64,7 +64,7 @@ export const ProjectPanel = forwardRef<HTMLDivElement, ProjectPanelProps>(
         }, [currentIndex, index, setPosition]);
 
         return (
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col gap-2 cursor-pointer">
                 <div
                     ref={setRefs}
                     className={cn(s.body, "group")}

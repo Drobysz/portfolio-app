@@ -17,8 +17,8 @@ export const MouseGuide = ()=> {
         <div 
             className={s.body}
             style={{
-                left: x,
-                top: y,
+                left: x + 20,
+                top: y + 20,
                 transform: "translate(12px, 12px)",
             }}
         >
