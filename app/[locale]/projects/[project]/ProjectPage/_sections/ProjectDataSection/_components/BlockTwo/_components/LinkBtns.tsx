@@ -4,11 +4,11 @@ import cn from "classnames";
 export const LinkBtns = ({ 
 	project_url,
 	repository_url,
-	cover_image_url
+	project_image_url
 }: {
 	project_url: string | null;
   	repository_url: string | null;
-	cover_image_url: string | null;
+	project_image_url: string | null;
 })=> {
 	return (
 		<div className={cn(
@@ -28,7 +28,7 @@ export const LinkBtns = ({
 				</LinkImageBtn>
 			}
 			{project_url &&
-				<LinkImageBtn img={cover_image_url ?? ""}>
+				<LinkImageBtn img={project_image_url ?? ""}>
 					<CustomBtn 
 						className="w-full"
 						size="medium"
