@@ -78,7 +78,7 @@ export const ProjectsFeed = ()=> {
             />
             <div
                 ref={containerRef}
-                className="overflow-x-hidden w-full"
+                className="overflow-x-hidden w-full max-[780px]:overflow-x-auto"
             >
                 <div className="flex items-start gap-6 relative">
                     {!projectsError && !areProjectsLoading && projects 
