@@ -29,7 +29,7 @@ export const Switchers = ({
     const nextRightIndex = currentIndex + 1;
 
     const isLeftActive = nextLeftIndex >= 0;
-    const isRightActive = nextRightIndex <= projectNb;
+    const isRightActive = nextRightIndex < projectNb;
 
     const handleLeftClick = ()=> {
         if (isLeftActive) {
@@ -68,6 +68,20 @@ export const Switchers = ({
         return ()=> document.removeEventListener('keydown', handleKeyDown);
     }, [currentIndex]);
 
+    useEffect(() => {
+        return () => {
+            document.documentElement.classList.remove("is-switcher-hovered");
+        };
+    }, []);
+
+    const handleSwitcherPointerEnter = () => {
+        document.documentElement.classList.add("is-switcher-hovered");
+    };
+
+    const handleSwitcherPointerLeave = () => {
+        document.documentElement.classList.remove("is-switcher-hovered");
+    };
+
     const variantsLeft = {
         hidden: { opacity: 0, x: -20 },
         visible: { opacity: 1, x: 0 }
@@ -91,14 +105,16 @@ export const Switchers = ({
                     className={cn(
                         s.space,
                         s.shadow_left,
-                        "left-0"
+                        "left-0 cursor-pointer"
                     )}
                     animate={{
                         opacity: isHovered ? 1 : 0.9
                     }}
+                    onPointerEnter={handleSwitcherPointerEnter}
+                    onPointerLeave={handleSwitcherPointerLeave}
                 >
                     <motion.button
-                        className={s.switcher}
+                        className={cn(s.switcher, "cursor-pointer")}
                         onClick={handleLeftClick}
                         animate={isHovered ? "visible" : "hidden"}
                         variants={variantsLeft}
@@ -113,14 +129,16 @@ export const Switchers = ({
                     className={cn(
                         s.space,
                         s.shadow_right,
-                        "right-0 justify-end"
+                        "right-0 justify-end cursor-pointer"
                     )}
                     animate={{
                         opacity: isHovered ? 1 : 0.9
                     }}
+                    onPointerEnter={handleSwitcherPointerEnter}
+                    onPointerLeave={handleSwitcherPointerLeave}
                 >
                     <motion.button
-                        className={s.switcher}
+                        className={cn(s.switcher, "cursor-pointer")}
                         onClick={handleRightClick}
                         animate={isHovered ? "visible" : "hidden"}
                         variants={variantsRight}

@@ -3,6 +3,11 @@
 .space {
     @apply absolute h-full w-30
         flex items-center z-20;
+    cursor: var(--cursor-pointer);
+}
+
+.space * {
+    cursor: var(--cursor-pointer);
 }
 
 .shadow_left {
@@ -30,6 +35,12 @@
         hover:opacity-85 active:scale-95 ease-in
         rounded-full bg-gray-400 -translate-y-1/2 
         text-gray-800 cursor-pointer;
+    cursor: var(--cursor-pointer);
+}
+
+.switcher,
+.switcher * {
+    cursor: var(--cursor-pointer);
 }
 
 @media (max-width: 780px) {

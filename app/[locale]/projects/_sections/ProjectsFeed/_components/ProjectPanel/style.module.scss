@@ -4,6 +4,7 @@
     @apply relative cursor-pointer 
         place-content-center border-2 border-white
         h-60 w-40 overflow-hidden rounded-3xl shrink-0;
+    cursor: var(--cursor-pointer);
 }
 
 .background_of_selected {

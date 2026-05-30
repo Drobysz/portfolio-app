@@ -5,7 +5,8 @@
 	@apply col-span-2 h-[350px] cursor-pointer
 		max-[1080px]:h-[250px]
 		max-[580px]:h-[150px]
-		max-[350px]:col-span-3
+		max-[350px]:col-span-3;
+	cursor: var(--cursor-pointer);
 }
 
 .container_title_1 {
@@ -41,7 +42,8 @@
 .container_3 {
 	@apply col-span-3 h-[300px]
 		cursor-pointer
-		max-[430px]:h-[150px]
+		max-[430px]:h-[150px];
+	cursor: var(--cursor-pointer);
 }
 
 .container_title_3 {

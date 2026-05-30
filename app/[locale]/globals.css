@@ -1,20 +1,36 @@
 @import "tailwindcss";
 
+:root {
+  --cursor-default: url('/cursor/mouse.png') 0 0, auto;
+  --cursor-pointer: url('/cursor/pointer.png') 0 0, pointer;
+}
+
 main,
 body {
   scrollbar-width: none;
   -ms-overflow-style: none;
-  
 }
 
 /* Cursor customisation */
+html,
 body {
-    cursor: url('/cursor/mouse.png') 0 0, pointer;
-};
+  cursor: var(--cursor-default);
+}
 
+a,
+button,
+[role="button"],
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
 .cursor-pointer {
-    cursor: url('/cursor/pointer.png') 0 0, pointer;
-};
+  cursor: var(--cursor-pointer) !important;
+}
+
+html.is-switcher-hovered,
+html.is-switcher-hovered * {
+  cursor: var(--cursor-pointer) !important;
+}
 
 main::-webkit-scrollbar,
 body::-webkit-scrollbar {

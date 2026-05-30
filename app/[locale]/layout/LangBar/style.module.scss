@@ -18,6 +18,7 @@
         hover:bg-gray-800
         cursor-pointer px-2
         flex gap-1 justify-center;
+    cursor: var(--cursor-pointer);
 }
 
 .lang_sel:first-child {
@@ -27,4 +28,5 @@
 .lang_btn {
     @apply py-2 px-2 cursor-pointer
         flex gap-1 justify-center;
+    cursor: var(--cursor-pointer);
 }
