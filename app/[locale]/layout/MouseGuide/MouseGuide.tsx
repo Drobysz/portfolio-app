@@ -18,7 +18,8 @@ export const MouseGuide = ()=> {
             className={s.body}
             style={{
                 left: x,
-                top: y + 160
+                top: y,
+                transform: "translate(12px, 12px)",
             }}
         >
             {mouseText}

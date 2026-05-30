@@ -2,7 +2,7 @@
 
 .body {
     @apply px-2 py-1 text-zinc-400 
-        w-fit flex flex-wrap absolute
+        w-fit flex flex-wrap fixed pointer-events-none
         z-30 rounded-2xl bg-gray-700
         border border-zinc-500 text-xs
         min-w-30;

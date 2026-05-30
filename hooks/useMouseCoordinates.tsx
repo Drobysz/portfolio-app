@@ -6,8 +6,8 @@ export const useMouseCoordinates = ()=> {
     useEffect(() => {
         let animationFrame: number | null = null;
 
-        const handleMouseMove = (e: MouseEvent) => {
-            const nextPosition = { x: e.pageX, y: e.pageY };
+        const handleMouseMove = (e: PointerEvent) => {
+            const nextPosition = { x: e.clientX, y: e.clientY };
 
             if (animationFrame) {
                 window.cancelAnimationFrame(animationFrame);
@@ -19,14 +19,14 @@ export const useMouseCoordinates = ()=> {
             });
         };
 
-        window.addEventListener("mousemove", handleMouseMove, { passive: true });
+        window.addEventListener("pointermove", handleMouseMove, { passive: true });
 
         return () => {
             if (animationFrame) {
                 window.cancelAnimationFrame(animationFrame);
             }
 
-            window.removeEventListener("mousemove", handleMouseMove);
+            window.removeEventListener("pointermove", handleMouseMove);
         };
     }, []);
 
