@@ -47,6 +47,33 @@
     .switcher {
         @apply translate-y-[-80%] ;
     }
+
+    .shadow_left {
+        background:
+            linear-gradient(
+                -90deg,
+                rgba(10, 10, 10, 0) 0%,
+                rgba(10, 10, 10, 0.3) 25%,
+                rgba(10, 10, 10, 0.8) 50%,
+                rgba(10, 10, 10, 1) 100%,
+            );
+    }
+
+    .shadow_right {
+        background:
+            linear-gradient(
+                90deg,
+                rgba(10, 10, 10, 0) 0%,
+                rgba(10, 10, 10, 0.3) 25%,
+                rgba(10, 10, 10, 0.8) 50%,
+                rgba(10, 10, 10, 1) 100%,
+            );
+    }
+
+    .space {
+        @apply w-15;
+        cursor: var(--cursor-pointer);
+    }
 }
 
 @media (max-width: 620px) {

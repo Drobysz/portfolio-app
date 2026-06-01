@@ -1,0 +1,12 @@
+@reference "tailwindcss";
+
+.body {
+    @apply relative pt-8 h-[55vh] flex items-center;
+}
+
+@media (max-width: 560px) {
+    .body {
+        @apply pt-4 h-fit
+            flex-col gap-8;
+    }
+}

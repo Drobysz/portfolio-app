@@ -39,7 +39,7 @@ export const Switchers = ({
 
     const handleRightClick = ()=> {
         if (isRightActive) {
-            setIndex(Math.min(projectNb, nextRightIndex));
+            setIndex(Math.min(projectNb - 1, nextRightIndex));
         }
     };
 
@@ -54,7 +54,7 @@ export const Switchers = ({
 
 				case "ArrowRight":
 					if (isRightActive) {
-                        setIndex(Math.min(projectNb, nextRightIndex));
+                        setIndex(Math.min(projectNb - 1, nextRightIndex));
                     }
 					break;
 			

@@ -1,5 +1,10 @@
 @reference "tailwindcss";
 
+.body {
+	@apply grid grid-cols-3 gap-6 mb-50
+		max-[580px]:gap-4 max-[580px]:mb-20;
+}
+
 // container 1
 .container_1 {
 	@apply col-span-2 h-[350px] cursor-pointer
@@ -12,21 +17,21 @@
 .container_title_1 {
 	@apply text-white font-bold text-7xl
 		max-[580px]:text-5xl
-		max-[350px]:text-3xl
+		max-[350px]:text-3xl;
 }
 
 .container_image_1 {
 	@apply absolute -bottom-30
 		-right-[20%] rounded-2xl
 		max-[1080px]:-bottom-48
-		max-[785px]:hidden
+		max-[785px]:hidden;
 }
 
 // container 2
 .container_2 {
 	@apply max-[1080px]:h-[250px]
 		max-[580px]:h-[150px]
-		max-[350px]:col-span-3
+		max-[350px]:col-span-3;
 }
 
 .container_title_2 {
@@ -36,6 +41,7 @@
 		max-[824px]:text-4xl
 		max-[710px]:text-2xl
 		max-[450px]:text-lg
+		max-[350px]:text-3xl;
 }
 
 // container 3
@@ -51,7 +57,7 @@
 	text-7xl z-50
 	max-[565px]:text-5xl
 	max-[430px]:text-4xl
-	max-[350px]:text-3xl
+	max-[350px]:text-3xl;
 }
 
 .container_image_3 {
@@ -61,5 +67,5 @@
 		max-[750px]:-right-[35%]
 		max-[565px]:-bottom-25
 		max-[450px]:-bottom-15
-		max-[430px]:hidden
+		max-[430px]:hidden;
 }

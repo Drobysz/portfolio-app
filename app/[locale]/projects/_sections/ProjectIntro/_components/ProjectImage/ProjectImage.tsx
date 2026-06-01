@@ -1,9 +1,10 @@
-import { ProjectsContext } from "@/app/[locale]/projects/context/projects.context";
+"use client";
+
 import { AnimatePresence, motion } from "framer-motion";
-import { useContext } from "react";
 import { variantsBackgroundContent } from "../AnimationProps";
 import { Project } from "@/interfaces";
 import { FullScreenSpin } from "@/components";
+import s from "./style.module.scss";
 
 export const ProjectImage = ({
 	project
@@ -16,7 +17,7 @@ export const ProjectImage = ({
 		<AnimatePresence>
 			<motion.div 
 				key={`main_img_${project.slug}`}
-				className="absolute right-0 h-full w-[55%] rounded-md max-[1032px]:h-[80%] max-[800px]:h-[50%]"
+				className={s.body}
 				style={{
 					backgroundImage: `url(${project.project_image_url})`,
 					backgroundSize: "cover",

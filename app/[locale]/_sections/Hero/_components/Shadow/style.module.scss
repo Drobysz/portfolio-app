@@ -1,0 +1,17 @@
+@reference "tailwindcss";
+
+.shadow {
+    @apply absolute inset-0 w-full h-full z-20
+        bg-radial from-transparent
+        via-[#0a0a0a]/20 via-30%
+        to-[#0a0a0a]/98 to-75%
+        pointer-events-none;
+}
+
+@media (max-width: 380px) {
+    .shadow {
+        @apply from-transparent 
+        via-[#0a0a0a]/20 via-40%
+        to-[#0a0a0a]/80 to-60%;
+    }
+}

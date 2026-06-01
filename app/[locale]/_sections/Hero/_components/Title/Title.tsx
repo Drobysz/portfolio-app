@@ -15,7 +15,8 @@ export const Title = ()=> {
 			</TypeWriterEffectText>
 			<div className={cn(
 				"flex gap-2",
-				"items-center justify-center"
+				"items-center justify-center",
+				"max-[380px]:flex-col"
 			)}>
 				<p className={cn(
 					"text-center text-2xl text-transparent",

@@ -8,6 +8,7 @@
         ". main ."
         "footer footer footer";
 };
+
 .header {
     grid-area: header;
 };
@@ -32,5 +33,11 @@
 
     .main {
         padding: 0 2rem 0 2rem;
+    };
+};
+
+@media (max-width: 580px) {
+    .main {
+        padding: 0 1rem 0 1rem;
     };
 };

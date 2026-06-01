@@ -3,3 +3,17 @@
 .feed_layout {
     @apply relative w-full p-5 mb-30;
 }
+
+.feed_container {
+    @apply overflow-x-hidden w-full max-[780px]:overflow-x-auto;
+}
+
+.feed_list {
+    @apply flex items-start gap-6 relative;
+}
+
+@media (max-width: 560px) {
+    .feed_list {
+        @apply gap-3;
+    }
+}

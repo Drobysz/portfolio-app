@@ -40,8 +40,6 @@ export const MouseGuide = ()=> {
         const windowWidth = window.innerWidth;
         const elementRightEdge = x + element.offsetWidth;
 
-        console.log(elementRightEdge < windowWidth)
-
         setIsEnoughSpaceRight(elementRightEdge < windowWidth);
     }, [mouseText, x]);
 

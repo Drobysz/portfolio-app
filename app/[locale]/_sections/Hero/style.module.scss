@@ -1,0 +1,11 @@
+@reference "tailwindcss";
+
+.body {
+    @apply h-[90vh] relative w-full overflow-hidden
+        bg-[#0a0a0a] flex flex-col items-center
+        justify-center rounded-4xl mb-20;
+}
+
+.background {
+    @apply flex justify-start items-end;
+}

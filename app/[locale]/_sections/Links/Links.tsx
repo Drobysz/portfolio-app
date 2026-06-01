@@ -7,7 +7,7 @@ export const Links = ()=>{
     const t = useTranslations("Home.links");
 
     return (
-        <section className="grid grid-cols-3 gap-6 mb-50">
+        <section className={styles.body}>
             <WobbleContainer 
                 className={styles.container_1}
                 href="https://github.com/Drobysz"

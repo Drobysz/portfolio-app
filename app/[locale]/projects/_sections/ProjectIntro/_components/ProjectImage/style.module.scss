@@ -1,0 +1,24 @@
+@reference "tailwindcss";
+
+.body {
+    @apply h-full w-[55%] rounded-md 
+        max-[1032px]:h-[80%] max-[800px]:h-[50%];
+}
+
+@media (min-width: 560px) {
+    .body {
+        @apply absolute right-0;
+    }
+}
+
+@media (max-width: 560px) {
+    .body {
+        @apply block w-full h-50 shrink-0 order-first;
+    }
+}
+
+@media (max-width: 380px) {
+    .body {
+        @apply h-35;
+    }
+}

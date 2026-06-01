@@ -1,7 +1,6 @@
 'use client'
 
 import { useContext, useEffect, useRef, useState } from "react";
-import s from "./style.module.scss";
 import { CursorProps } from "./types";
 import { 
     Cursor,
@@ -11,6 +10,7 @@ import {
 } from "./_components";
 import { ProjectsContext } from "../../context/projects.context";
 import { AppContext } from "@/app/[locale]/context/app.context";
+import s from "./style.module.scss";
 
 
 export const ProjectsFeed = ()=> {
@@ -21,9 +21,8 @@ export const ProjectsFeed = ()=> {
         currentIndex,
     } = useContext(ProjectsContext);
 
-    const { 
-        setMouseText,
-    } = useContext(AppContext);
+    const { setMouseText } = useContext(AppContext);
+    const prevIndexRef = useRef(currentIndex);
 
     const [position, setPosition] = useState<CursorProps>({
         left: 0,
@@ -37,21 +36,27 @@ export const ProjectsFeed = ()=> {
     const containerRef = useRef<HTMLDivElement | null>(null);
 	const panelRef = useRef<Array<HTMLDivElement | null>>([]);
 
+    const scrollToCard = (index: number) => {
+        const container = containerRef.current;
+        const el = panelRef.current[index];
+
+        if (!container || !el) return;
+
+        const left = 
+            container.scrollLeft + 
+            el.offsetLeft - 
+            container.offsetLeft - 
+            (container.clientWidth / 2) + 
+            (el.clientWidth / 2);
+
+        container.scrollTo({
+            left,
+            behavior: "smooth",
+        });
+    }
+
     useEffect(() => {
-		const container = containerRef.current;
-		const el = panelRef.current[currentIndex];
-
-		if (!el) return;
-
-		container?.scrollTo({
-			behavior: "smooth",
-			left: el.offsetLeft - container.offsetLeft
-		});
-
-		if (currentIndex === 0) {
-			container!.scrollTo({ left: 0, behavior: 'smooth' });
-			return;
-		}
+        scrollToCard(currentIndex);
 
 	}, [currentIndex]);
 
@@ -78,9 +83,9 @@ export const ProjectsFeed = ()=> {
             />
             <div
                 ref={containerRef}
-                className="overflow-x-hidden w-full max-[780px]:overflow-x-auto"
+                className={s.feed_container}
             >
-                <div className="flex items-start gap-6 relative">
+                <div className={s.feed_list}>
                     {!projectsError && !areProjectsLoading && projects 
                         && projects.map( (p, index)=> (
                         <ProjectPanel

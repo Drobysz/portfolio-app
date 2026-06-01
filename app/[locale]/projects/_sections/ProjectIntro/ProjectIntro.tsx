@@ -1,7 +1,5 @@
 'use client'
 
-import cn from "classnames";
-
 import { 
     Shadow,
     ProjectImage,
@@ -10,6 +8,7 @@ import {
 import { useContext } from "react";
 import { ProjectsContext } from "../../context/projects.context";
 import { FullScreenSpin } from "@/components";
+import s from "./style.module.scss";
 
 export const ProjectIntro = ()=> {
     const {
@@ -27,11 +26,8 @@ export const ProjectIntro = ()=> {
 
     return (
         <>
-            { !projectsError && !areProjectsLoading && projects && 
-                <section className={cn(
-                    "relative pt-8",
-                    "h-[55vh] flex items-center"
-                )}>
+            {!projectsError && !areProjectsLoading && projects && 
+                <section className={s.body}>
                     <ProjectIntroInfo 
                         project={currentProject!}
                     />
