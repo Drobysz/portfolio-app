@@ -1,4 +1,5 @@
-import { CardSpotlight, GlowingEffect } from "@/components/index";
+import { GlowingEffect } from "@/components/animations/GlowingEffect";
+import { CardSpotlight } from "@/components/animations/Spotlight";
 import styles from "./CV.module.scss";
 import { 
     AboutMe,

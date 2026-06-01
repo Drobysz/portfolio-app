@@ -1,4 +1,5 @@
-import { TypeWriterEffectText, ContainerTextFlip } from "@/components/index";
+import { ContainerTextFlip } from "@/components/index";
+import { TypeWriterEffectText } from "@/components/animations/TypeWriterEffectText";
 import skills from "./skills.json";
 import cn from "classnames";
 import { useTranslations } from "next-intl";

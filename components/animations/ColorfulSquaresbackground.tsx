@@ -1,11 +1,24 @@
 "use client";
-import React from "react";
+import React, { useMemo } from "react";
 import { motion } from "framer-motion";
 import cn from 'classnames';
+import { useWindowWidth } from "@/hooks/useWindowWidth";
+
+const getGridSize = (width: number) => {
+  if (width <= 360) return { rowsCount: 34, colsCount: 24 };
+  if (width <= 480) return { rowsCount: 42, colsCount: 30 };
+  if (width <= 600) return { rowsCount: 54, colsCount: 38 };
+  if (width <= 900) return { rowsCount: 80, colsCount: 58 };
+  if (width <= 1200) return { rowsCount: 110, colsCount: 78 };
+  return { rowsCount: 150, colsCount: 100 };
+};
 
 export const SquaresCore = ({ className, ...rest }: { className?: string }) => {
-  const rows = new Array(150).fill(1);
-  const cols = new Array(100).fill(1);
+  const width = useWindowWidth();
+  const { rowsCount, colsCount } = getGridSize(width);
+  const rows = useMemo(() => new Array(rowsCount).fill(1), [rowsCount]);
+  const cols = useMemo(() => new Array(colsCount).fill(1), [colsCount]);
+  const isInteractive = width > 600;
   const colors = [
     "#3B82F6", 
     "#2563EB", 
@@ -43,12 +56,16 @@ export const SquaresCore = ({ className, ...rest }: { className?: string }) => {
           className="relative h-8 w-16 border-l border-slate-700"
         >
           {cols.map((_, j) => (
-            <motion.div
-              whileHover={cubeColor}
-              whileTap={cubeColor}
-              animate={{
-                transition: { duration: 2 },
-              }}
+              <motion.div
+	              {...(isInteractive
+	                ? {
+	                  whileHover: cubeColor,
+	                  whileTap: cubeColor,
+	                }
+	                : {})}
+	              animate={{
+	                transition: { duration: 2 },
+	              }}
               key={`col` + j}
               className="relative h-8 w-16 border-t border-r border-slate-700"
             >

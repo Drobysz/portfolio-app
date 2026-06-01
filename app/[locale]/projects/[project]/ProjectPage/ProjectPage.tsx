@@ -1,6 +1,7 @@
 "use client";
 
-import { BackgroundLines, FullScreenSpin } from "@/components";
+import { FullScreenSpin } from "@/components";
+import { BackgroundLines } from "@/components/animations/BackgroundLines";
 import { RotatingIcon, ProjectDataSection } from "./_sections";
 
 import { notFound } from "next/navigation";

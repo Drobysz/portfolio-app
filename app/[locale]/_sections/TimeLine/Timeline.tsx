@@ -1,8 +1,8 @@
 'use client'
 
 import { useRef } from "react";
-import { Bubletext } from "@/components/index";
-import { Line, Events } from "./components/index";
+import { Bubletext } from "@/components";
+import { Line, Events } from "./components";
 import styles from "./Timeline.module.scss";
 import { useScroll, useSpring, useTransform } from "framer-motion";
 import { useTranslations } from "next-intl";

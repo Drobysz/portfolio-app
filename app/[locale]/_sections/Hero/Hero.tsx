@@ -1,5 +1,5 @@
 import { Shadow, Title } from "./components/index";
-import { ColorfulSquaresBackground } from "@/components/index";
+import { ColorfulSquaresBackground } from "@/components/animations/ColorfulSquaresbackground";
 import cn from "classnames";
 
 export const Hero = ()=> {

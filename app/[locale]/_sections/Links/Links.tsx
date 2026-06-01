@@ -1,4 +1,4 @@
-import { WobbleContainer } from "@/components/index";
+import { WobbleContainer } from "@/components/animations/WoobleContainer";
 import Image from "next/image";
 import styles from "./Links.module.scss";
 import { useTranslations } from "next-intl";
@@ -19,6 +19,8 @@ export const Links = ()=>{
                     className={styles.container_image_1}
                     width={600}
                     height={300}
+                    sizes="(max-width: 785px) 0px, (max-width: 1080px) 600px, 600px"
+                    style={{ height: "auto" }}
                     alt={t("serviceAlt")}
                 />
             </WobbleContainer>
@@ -40,6 +42,8 @@ export const Links = ()=>{
                     className={styles.container_image_3}
                     width={600}
                     height={300}
+                    sizes="(max-width: 430px) 0px, (max-width: 1080px) 600px, 600px"
+                    style={{ height: "auto" }}
                     alt={t("serviceAlt")}
                 />
             </WobbleContainer>

@@ -1,8 +1,7 @@
 'use client'
 
-import { createContext, Dispatch, ReactNode, SetStateAction, useEffect, useState } from "react";
+import { createContext, ReactNode, useState } from "react";
 import { AppContextProps, AppNotification, Coords } from "./app.interface";
-import { useMouseCoordinates } from "@/hooks";
 
 export const AppContext = createContext<AppContextProps>({
     isVisible: false,

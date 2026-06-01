@@ -1,4 +1,4 @@
-import { GlowingEffect } from "@/components/index";
+import { GlowingEffect } from "@/components/animations/GlowingEffect";
 import { tronecal } from "@/fonts/fonts";
 import { Contacts, ContactImage } from "./components";
 import styles from "./ContactData.module.scss";

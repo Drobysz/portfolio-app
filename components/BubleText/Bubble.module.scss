@@ -6,27 +6,27 @@
 
 .hoverText:hover {
   font-weight: 900;
-  color: oklch(30% 0.25 240);
+  color: oklch(65.149% 0.19205 251.488);
 }
 
 /* To the right */
 .hoverText:hover + .hoverText {
   font-weight: 500;
-  color: oklch(50% 0.20 240);
+  color: oklch(55.634% 0.16366 252.371);
 }
 
 .hoverText:hover + .hoverText + .hoverText {
   font-weight: 300;
-  color: oklch(70% 0.12 240);
+  color: oklch(45.554% 0.0971 245.379);
 }
 
 /* To the left */
 .hoverText:has(+ .hoverText:hover) {
   font-weight: 500;
-  color: oklch(50% 0.20 240);
+  color: oklch(55.634% 0.16366 252.371);
 }
 
 .hoverText:has(+ .hoverText + .hoverText:hover) {
   font-weight: 300;
-  color: oklch(70% 0.12 240);
+  color: oklch(45.554% 0.0971 245.379);
 }

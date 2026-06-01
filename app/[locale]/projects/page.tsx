@@ -1,4 +1,4 @@
-import { BackgroundLines }  from "@/components/index";
+import { BackgroundLines } from "@/components/animations/BackgroundLines";
 import { ProjectIntro, ProjectsFeed } from "./_sections/index";
 import type { Metadata } from "next";
 

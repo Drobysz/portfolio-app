@@ -1,4 +1,4 @@
-import { GlowingEffect } from "@/components/index";
+import { GlowingEffect } from "@/components/animations/GlowingEffect";
 import { ReactNode } from "react";
 import s from "./style.module.scss";
 
