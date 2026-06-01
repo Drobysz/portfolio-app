@@ -10,8 +10,8 @@ export const MouseGuide = ()=> {
     const {
         mouseText
     } = useContext(AppContext);
-    const {x, y} = useMouseCoordinates();
     const [visible, setVisible] = useState(false);
+    const {x, y} = useMouseCoordinates(visible);
 
     useEffect(()=> {
         if (!mouseText) {

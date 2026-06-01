@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 
-export const useMouseCoordinates = ()=> {
+export const useMouseCoordinates = (isActive: boolean) => {
     const [mousePosition, setMousePosition] = useState<{x: number , y: number}>({ x: 0, y: 0 });
 
     useEffect(() => {
+        if (!isActive) return;
+
         let animationFrame: number | null = null;
 
         const handleMouseMove = (e: PointerEvent) => {
@@ -28,7 +30,7 @@ export const useMouseCoordinates = ()=> {
 
             window.removeEventListener("pointermove", handleMouseMove);
         };
-    }, []);
+    }, [isActive]);
 
     return {
         x: mousePosition.x,
