@@ -1,6 +1,6 @@
 "use client";
 
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import { AppContext } from "../../context/app.context";
 import s from "./style.module.scss";
 import { useMouseCoordinates } from "@/hooks";
@@ -11,7 +11,9 @@ export const MouseGuide = ()=> {
         mouseText
     } = useContext(AppContext);
     const [visible, setVisible] = useState(false);
+    const [isEnoughSpaceRight, setIsEnoughSpaceRight] = useState(true);
     const {x, y} = useMouseCoordinates(visible);
+    const ref = useRef<HTMLDivElement>(null);
 
     useEffect(()=> {
         if (!mouseText) {
@@ -30,14 +32,26 @@ export const MouseGuide = ()=> {
         return ()=> clearTimeout(timoutId);
     }, [mouseText]);
 
+    useEffect(() => {
+        const element = ref.current;
+
+        if (!element || !mouseText || !visible) return;
+
+        const windowWidth = window.innerWidth;
+        const elementRightEdge = x + element.offsetWidth;
+
+        console.log(elementRightEdge < windowWidth)
+
+        setIsEnoughSpaceRight(elementRightEdge < windowWidth);
+    }, [mouseText, x]);
+
     if (!mouseText) return null;
 
     const variants = {
         "visible": {
             opacity: 1,
             scale: 1,
-            transform: "translate(2rem, 2rem)",
-            x: 32,
+            x: isEnoughSpaceRight ? 32 : "-110%",
             y: 32,
         },
         "unvisible": {
@@ -58,6 +72,7 @@ export const MouseGuide = ()=> {
     return (
         <motion.div 
             className={s.body}
+            ref={ref}
             style={{
                 left: x,
                 top: y
