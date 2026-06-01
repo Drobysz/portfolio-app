@@ -6,6 +6,8 @@
         justify-center rounded-4xl mb-20;
 }
 
-.background {
-    @apply flex justify-start items-end;
+@media (max-width: 600px) {
+    .background {
+        @apply flex justify-start items-end;
+    }
 }
