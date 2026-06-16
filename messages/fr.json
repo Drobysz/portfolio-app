@@ -52,12 +52,12 @@
           "description": "Pendant l'ete 2024, j'ai commence a apprendre le developpement Python. J'ai etudie la syntaxe de base, PHP, Composer, les fonctions lambda, les decorateurs, les iterateurs, la POO, les comprehensions de listes, les expressions generatrices, Flask et Django. Pour lancer une petite activite commerciale, je me suis aussi plonge dans le developpement de bots Telegram. J'ai commence a creer des bots Telegram sur commande et pour mes projets personnels. Mon bot de dropshipping sur Telegram est @Planoise_test_bot."
         },
         "2": {
-          "date": "2024-aujourd'hui",
+          "date": "2024-présent",
           "title": "Entree a l'IUT de Marne-la-Vallee",
           "description": "En 2024, j'ai rejoint la formation MMI. Ce programme combine plusieurs disciplines : marketing, graphisme, design et programmation. En programmation, nous avons etudie les bases de l'integration web avec HTML et CSS, les fondamentaux de JavaScript et PHP, ainsi que le fonctionnement du systeme de gestion de base de donnees MySQL."
         },
         "3": {
-          "date": "2025-aujourd'hui",
+          "date": "2025-présent",
           "title": "Autoformation",
           "description": "Depuis fevrier 2025, je poursuis mon apprentissage autonome dans plusieurs domaines : front-end, back-end et DevOps. Pour le front-end, j'ai etudie React, Next.js, Tailwind, Sass, Framer Motion et Three.js. Pour construire des API, j'ai appris la POO en PHP, le framework Laravel et Redis. Pour le deploiement, j'ai etudie la conteneurisation avec Docker, decouvert Nginx pour le port forwarding, et commence a travailler avec les buckets Amazon S3 pour le stockage distant de fichiers media et audio. Depuis le debut de cette periode d'autoformation, fin fevrier 2025, j'ai cree deux projets avec Next.js."
         }
