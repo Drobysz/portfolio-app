@@ -17,7 +17,7 @@ export const SMbody = ({
 		<motion.div 
 			className={cn(
 				"relative flex rounded-full",
-				"items-center justify-cente",
+				"items-center justify-center",
 				"bg-neutral-800"
 			)}
 			ref={ref}
