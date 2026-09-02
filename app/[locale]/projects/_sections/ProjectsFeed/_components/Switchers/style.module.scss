@@ -33,7 +33,7 @@
 .switcher {
     @apply p-2 duration-200 transition-all w-fit
         hover:opacity-85 active:scale-95 ease-in
-        rounded-full bg-gray-400 -translate-y-1/2 
+        rounded-full bg-gray-400 translate-y-[-80%]
         text-gray-800 cursor-pointer;
     cursor: var(--cursor-pointer);
 }
