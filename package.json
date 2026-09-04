@@ -10,13 +10,16 @@
     "export": "next export"
   },
   "overrides": {
-    "postcss": "8.5.10"
+    "postcss": "8.5.23",
+    "sharp": "0.35.3"
   },
   "dependencies": {
+    "@lottiefiles/dotlottie-react": "^0.19.16",
     "antd": "^5.26.3",
     "clsx": "^2.1.1",
+    "locomotive-scroll": "^5.0.1",
+    "lucide": "^1.41.0",
     "next": "^16.2.6",
-    "next-svgr": "^0.0.2",
     "react": "^19.2.3",
     "react-dom": "^19.2.3"
   },
@@ -40,7 +43,7 @@
     "i18next": "^26.3.0",
     "i18next-browser-languagedetector": "^8.2.1",
     "i18next-http-backend": "^4.0.0",
-    "lucide-react": "^1.17.0",
+    "lucide-react": "^1.41.0",
     "next-i18next": "^16.0.7",
     "next-intl": "^4.12.0",
     "react-i18next": "^17.0.8",
