@@ -2,7 +2,7 @@
 
 .colorful_frame {
 	@apply col-span-3 relative
-		h-[80vh] rounded-[2rem]
+		h-[80vh] rounded-4xl
 		max-[1110px]:col-span-2;
 }
 
@@ -16,4 +16,13 @@
 	@apply h-full w-full 
 		border-2 p-3.5 bg-[#0e0e0e]
 		rounded-[inherit] shadow-2xl;
+}
+
+.no_scrollbar::-webkit-scrollbar {
+	@apply hidden;
+}
+
+.no_scrollbar {
+	@apply scrollbar-none;
+	-ms-overflow-style: none;
 }

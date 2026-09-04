@@ -25,9 +25,9 @@ export const Education = ()=> {
                         </h3>
                         {formation.precisions.length > 0 && (
                             <ul className="pl-5 flex flex-col gap-4">
-                                {formation.precisions.map( (_, idx)=> (
+                                {formation.precisions.map( (idx, orderIdx)=> (
                                     <li
-                                        key={`id-precision-${idx}`}
+                                        key={`id-precision-${orderIdx}`}
                                         className="text-white"
                                     >
                                         ◉ {t(`education.${formationIdx}.precisions.${idx}`)}

@@ -1,23 +1,27 @@
 import { GlowingEffect } from "@/components/animations/GlowingEffect";
 import { CardSpotlight } from "@/components/animations/Spotlight";
-import styles from "./CV.module.scss";
+import s from "./CV.module.scss";
 import { 
     AboutMe,
     Skills,
     Experience,
     Education
 } from "./components/index";
+import cn from "classnames";
 
 export const CV = ()=> {
     return (
         <GlowingEffect
-            className={styles.colorful_frame}
+            className={s.colorful_frame}
             glow
             disabled={false}
             spread={80}
         >
-            <section className={styles.section_frame}>
-                <div className={styles.contact_data_section}>
+            <section className={s.section_frame}>
+                <div className={cn(
+                    s.contact_data_section,
+                    s.no_scrollbar
+                )}>
                     <CardSpotlight className="flex flex-col gap-12 justify-between">
                         <AboutMe />
                         <Skills />
