@@ -21,7 +21,7 @@ type HeaderType = DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivEleme
 
 export const Header = ({className}: HeaderType)=> {
     const { isVisible } = useContext(AppContext);
-    const width = useWindowWidth();
+    const width = useWindowWidth() as number;
     const canShowPagination = (!isVisible && width >= 900) || (isVisible && width >= 1120);
 
     return (

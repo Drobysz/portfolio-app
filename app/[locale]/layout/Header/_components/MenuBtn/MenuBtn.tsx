@@ -7,13 +7,13 @@ import { AppContext } from "@/app/[locale]/context/app.context";
 import cn from "classnames";
 
 export const MenuBtn = ({className}: {className: string})=> {
-    const width = useWindowWidth();
+    const isDesktop = useWindowWidth(770) as boolean;
     const { isMenuOpened, setMenuOpened } = useContext(AppContext);
 
     useEffect(()=> {
-        if (width > 770)
+        if (isDesktop)
             setMenuOpened(false);
-    },[width]);
+    },[isDesktop]);
 
     return (
         <div className={cn("hover:opacity-80 hover:scale-105 transition-all duration-200 ", className)}>
