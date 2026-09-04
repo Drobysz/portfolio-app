@@ -6,8 +6,10 @@ import { useScroll } from "framer-motion";
 import { useRef } from "react";
 import cn from "classnames";
 import s from "./style.module.scss";
+import { useTranslations } from "next-intl";
 
 export const Quote = ()=> {
+    const t = useTranslations("Services");
     const ref = useRef<HTMLDivElement | null>(null);
     const { scrollYProgress } = useScroll({
         target: ref,
@@ -27,7 +29,7 @@ export const Quote = ()=> {
                     )}
                     scrollYProgress={scrollYProgress}
                 >
-                    More than websites. Digital experiences built to showcase, sell, automate and grow — with thoughtful design, smooth interactions and technology that works behind the scenes.
+                    {t("quote")}
                 </ScrollParagraph>
             </div>
         </section>

@@ -7,13 +7,15 @@ import s from "./style.module.scss";
 import { MainBtn } from "@/components";
 import { useScroll, useTransform, motion } from "framer-motion";
 import { useRef } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter } from "@/i18n/navigation";
 import cn from "classnames";
-import { doppelganger, impact, press2p, skp59 } from "@/fonts/fonts";
+import { press2p } from "@/fonts/fonts";
 import { useWindowWidth } from "@/hooks";
+import { useTranslations } from "next-intl";
 
 export const Contact = ()=> {
     const router = useRouter();
+    const t = useTranslations("Services.contact");
     const containerRef = useRef<HTMLDivElement | null>(null);
     const isBtnDesktop = useWindowWidth(540) as boolean;
     const { scrollYProgress } = useScroll({
@@ -62,7 +64,7 @@ export const Contact = ()=> {
                         s.title,
                         press2p.className
                     )}>
-                        If you're interested
+                        {t("title")}
                     </h2>
                     <MainBtn
                         withArrow
@@ -71,7 +73,7 @@ export const Contact = ()=> {
                         color="white"
                         onClick={()=> router.push("/resume")}
                     >
-                        Let's talk
+                        {t("cta")}
                     </MainBtn>
                 </div>
             </motion.div>

@@ -13,13 +13,15 @@ import {
 import cn from "classnames";
 import { AnimatePresence, motion, Variants } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
+import { useTranslations } from "next-intl";
 
 export const SwipingFolders = ()=> {
+    const t = useTranslations("Services.categories");
     const icons: Record<string, LucideIcon> = {
-        "Showcase": ImagesIcon,
-        "E-commerce": ShoppingBagIcon,
-        "Platform": WrenchIcon,
-        "Reservation": SaveIcon
+        "showcase": ImagesIcon,
+        "ecommerce": ShoppingBagIcon,
+        "platform": WrenchIcon,
+        "reservation": SaveIcon
     }
 
     const variants: Variants = {
@@ -73,11 +75,12 @@ export const SwipingFolders = ()=> {
                 onExitComplete={handleCardLeave}
             >
             {cards.map((card, id) => {
-                const Icon = icons[card.tag];
+                const Icon = icons[card.id];
+                const label = t(card.id);
 
                 return (
                     <motion.div
-                        key={card.tag}
+                        key={card.id}
                         className={cn(
                             s.card
                         )}
@@ -103,7 +106,7 @@ export const SwipingFolders = ()=> {
                                 className="w-4 h-4"
                             />
                             <span>
-                                {card.tag}
+                                {label}
                             </span>
                         </h3>
                         <Image
@@ -112,7 +115,7 @@ export const SwipingFolders = ()=> {
                             loading="eager"
                             width={500}
                             height={360}
-                            alt={card.tag} 
+                            alt={label}
                         />
                     </motion.div>
                 )

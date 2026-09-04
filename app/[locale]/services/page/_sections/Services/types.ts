@@ -1,6 +1,5 @@
 export type Service = {
-    name: string;
-    description: string;
+    id: "showcase" | "ecommerce" | "platform" | "reservation";
     price: number;
     comission?: string;
 }

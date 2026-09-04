@@ -13,7 +13,7 @@ export const TabList = ({
 	const t = useTranslations("Layout");
 	const tabsList = [
         { href: '/', label: t('nav.0') },
-		{ href: '/services', label: "Services" },
+		{ href: '/services', label: t('nav.services') },
         { href: '/projects', label: t('nav.1') },
         { href: '/resume', label: t('nav.2') },
     ];

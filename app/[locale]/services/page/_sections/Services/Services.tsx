@@ -8,6 +8,9 @@ import {
     Card,
 } from "./_components";
 import { useWindowWidth } from "@/hooks";
+import { Service } from "./types";
+
+const serviceList = services as Service[];
 
 export const Services = ()=> {
     const refTunnel = useRef<HTMLDivElement | null>(null);
@@ -21,13 +24,13 @@ export const Services = ()=> {
         <section
             className={s.services_container}
             style={{
-                minHeight: `${100 * services.length + (isDesktop ? 35 : 5)}vh`
+                minHeight: `${100 * serviceList.length + (isDesktop ? 35 : 5)}vh`
             }}
             ref={refTunnel}
         >
-            {services.map((svc, i) =>
+            {serviceList.map((svc, i) =>
                 <div
-                    key={svc.name}
+                    key={svc.id}
                     className={s.card_container}
                     style={{
                         top: `calc(-10% + ${i * 25}px)`
@@ -36,7 +39,7 @@ export const Services = ()=> {
                     <Card 
                         order={i}
                         progress={scrollYProgress}
-                        cardLen={services.length}
+                        cardLen={serviceList.length}
                         service={svc}
                     />
                 </div>

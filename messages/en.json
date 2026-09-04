@@ -7,12 +7,17 @@
     "resume": {
       "title": "Resume",
       "description": "Here you can get familiar with Alexander's resume"
+    },
+    "services": {
+      "title": "Web Development Services",
+      "description": "Explore custom showcase sites, online stores, web platforms and booking systems designed and developed by Alexander Drobysz."
     }
   },
   "Layout": {
     "downloadCv": "Download CV",
     "nav": {
       "0": "History",
+      "services": "Services",
       "1": "Projects",
       "2": "Resume"
     }
@@ -182,6 +187,47 @@
           "value": "Champs-sur-Marne, Ile-de-France"
         }
       }
+    }
+  },
+  "Services": {
+    "hero": {
+      "title": "I offer a wide range",
+      "subtitle": "of services to help you achieve your goals."
+    },
+    "categories": {
+      "showcase": "Showcase",
+      "ecommerce": "E-commerce",
+      "platform": "Platform",
+      "reservation": "Booking"
+    },
+    "cards": {
+      "showcase": {
+        "description": "Creative websites built to present your brand, product or service with strong visuals and smooth interactions."
+      },
+      "ecommerce": {
+        "description": "Complete online stores with product management, checkout, payments and everything you need to start selling."
+      },
+      "platform": {
+        "description": "Custom web platforms with user accounts, subscriptions, dashboards and features built around your business."
+      },
+      "reservation": {
+        "description": "Booking systems with availability, calendars, online payments and automated reservation management."
+      }
+    },
+    "pricing": {
+      "withCommission": "with {commission} commission",
+      "zeroCommission": "no commission",
+      "withoutCommission": "commission-free",
+      "from": "from"
+    },
+    "quote": "More than websites. Digital experiences built to showcase, sell, automate and grow — with thoughtful design, smooth interactions and technology that works behind the scenes.",
+    "mascot": {
+      "description": "Our family tree of Polish nobility has included many talented individuals in fields ranging from the military and politics to business and agriculture. Now, the Drobysz Dynasty is entering the digital realm of web development.",
+      "imageAlt": "Drobysz Web developer mascot"
+    },
+    "contact": {
+      "title": "If you're interested",
+      "cta": "Let's talk"
     }
   }
 }

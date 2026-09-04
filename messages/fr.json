@@ -7,12 +7,17 @@
     "resume": {
       "title": "CV",
       "description": "Ici, vous pouvez consulter le CV d'Alexander"
+    },
+    "services": {
+      "title": "Services de développement web",
+      "description": "Découvrez des sites vitrines, boutiques en ligne, plateformes web et systèmes de réservation sur mesure, conçus et développés par Alexander Drobysz."
     }
   },
   "Layout": {
     "downloadCv": "Telecharger le CV",
     "nav": {
       "0": "Parcours",
+      "services": "Services",
       "1": "Projets",
       "2": "CV"
     }
@@ -182,6 +187,47 @@
           "value": "Champs-sur-Marne, Ile-de-France"
         }
       }
+    }
+  },
+  "Services": {
+    "hero": {
+      "title": "Je propose une large gamme",
+      "subtitle": "de services pour vous aider à atteindre vos objectifs."
+    },
+    "categories": {
+      "showcase": "Site vitrine",
+      "ecommerce": "E-commerce",
+      "platform": "Plateforme",
+      "reservation": "Réservation"
+    },
+    "cards": {
+      "showcase": {
+        "description": "Des sites vitrines créatifs conçus pour présenter votre marque, votre produit ou votre service avec une identité visuelle forte et des interactions fluides."
+      },
+      "ecommerce": {
+        "description": "Des boutiques en ligne complètes avec gestion des produits, commande, paiements et tout le nécessaire pour commencer à vendre."
+      },
+      "platform": {
+        "description": "Des plateformes web sur mesure avec comptes utilisateurs, abonnements, tableaux de bord et fonctionnalités adaptées à votre activité."
+      },
+      "reservation": {
+        "description": "Des systèmes de réservation avec disponibilités, calendriers, paiements en ligne et gestion automatisée des réservations."
+      }
+    },
+    "pricing": {
+      "withCommission": "avec {commission} de commission",
+      "zeroCommission": "sans commission",
+      "withoutCommission": "sans commission",
+      "from": "à partir de"
+    },
+    "quote": "Bien plus que des sites web. Des expériences numériques conçues pour présenter, vendre, automatiser et grandir — avec un design soigné, des interactions fluides et une technologie efficace en coulisses.",
+    "mascot": {
+      "description": "Notre arbre généalogique, issu de la noblesse polonaise, compte de nombreuses personnalités talentueuses dans des domaines allant de l'armée et de la politique aux affaires et à l'agriculture. Aujourd'hui, la dynastie Drobysz entre dans l'univers numérique du développement web.",
+      "imageAlt": "Mascotte de développement web Drobysz Web"
+    },
+    "contact": {
+      "title": "Si vous êtes intéressé",
+      "cta": "Parlons-en"
     }
   }
 }

@@ -2,7 +2,8 @@ import { MotionValue, useTransform, motion } from "framer-motion";
 import { Service } from "../../types";
 import s from "../../style.module.scss";
 import cn from "classnames";
-import { bagel_fat_one, doppelganger, handjet, inter, press2p, tronecal } from "@/fonts/fonts";
+import { bagel_fat_one, handjet, press2p } from "@/fonts/fonts";
+import { useTranslations } from "next-intl";
 
 const PriceTag = ({
     price,
@@ -11,6 +12,7 @@ const PriceTag = ({
     price: number;
     comission?: string;
 })=> {
+    const t = useTranslations("Services.pricing");
     const isComPresent = comission && comission !== "0%";
 
     return (
@@ -19,15 +21,15 @@ const PriceTag = ({
         >
             <p className={cn(s.comission_tag, handjet.className)}>
                 {isComPresent
-                    ? `with comission ${comission}`
+                    ? t("withCommission", { commission: comission })
                     : comission
-                        ? "none comission"
-                        : "with no comission"
+                        ? t("zeroCommission")
+                        : t("withoutCommission")
                 }
             </p>
             <div className={s.price_container}>
                 <span className={cn(s.from, bagel_fat_one.className)}>
-                    from
+                    {t("from")}
                 </span>
                 <span className={s.price_tag}>
                     <span className={cn(s.price, bagel_fat_one.className)}>
@@ -53,6 +55,7 @@ export const Card = ({
     cardLen: number;
     service: Service;
 })=> {
+    const t = useTranslations("Services");
     const rangeProgress = [order * 0.25, 1];
     const rangeScale = [1, 1 - ((cardLen - order) * 0.05)];
     const scale = useTransform(
@@ -74,7 +77,7 @@ export const Card = ({
                     handjet.className
                 )}
             >
-                {service.name}
+                {t(`categories.${service.id}`)}
             </h2>
             <div className={s.price_bar}>
                 <PriceTag 
@@ -96,7 +99,7 @@ export const Card = ({
                 s.desc,
                 press2p.className,
             )}>
-                {service.description}
+                {t(`cards.${service.id}.description`)}
             </p>
         </motion.div>
     )

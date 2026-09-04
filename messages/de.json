@@ -7,12 +7,17 @@
     "resume": {
       "title": "Lebenslauf",
       "description": "Hier kannst du Alexanders Lebenslauf kennenlernen"
+    },
+    "services": {
+      "title": "Webentwicklungsleistungen",
+      "description": "Entdecke maßgeschneiderte Präsentationswebsites, Onlineshops, Webplattformen und Buchungssysteme, gestaltet und entwickelt von Alexander Drobysz."
     }
   },
   "Layout": {
     "downloadCv": "Lebenslauf herunterladen",
     "nav": {
       "0": "Werdegang",
+      "services": "Leistungen",
       "1": "Projekte",
       "2": "Lebenslauf"
     }
@@ -182,6 +187,47 @@
           "value": "Champs-sur-Marne, Ile-de-France"
         }
       }
+    }
+  },
+  "Services": {
+    "hero": {
+      "title": "Ich biete ein breites Spektrum",
+      "subtitle": "an Leistungen, die dich beim Erreichen deiner Ziele unterstützen."
+    },
+    "categories": {
+      "showcase": "Präsentationswebsite",
+      "ecommerce": "Onlineshop",
+      "platform": "Webplattform",
+      "reservation": "Buchungssystem"
+    },
+    "cards": {
+      "showcase": {
+        "description": "Kreative Websites, die deine Marke, dein Produkt oder deine Dienstleistung mit einer starken Bildsprache und flüssigen Interaktionen präsentieren."
+      },
+      "ecommerce": {
+        "description": "Komplette Onlineshops mit Produktverwaltung, Bestellabwicklung, Zahlungen und allem, was du für den Verkaufsstart brauchst."
+      },
+      "platform": {
+        "description": "Individuelle Webplattformen mit Benutzerkonten, Abonnements, Dashboards und Funktionen, die auf dein Unternehmen zugeschnitten sind."
+      },
+      "reservation": {
+        "description": "Buchungssysteme mit Verfügbarkeiten, Kalendern, Onlinezahlungen und automatisierter Reservierungsverwaltung."
+      }
+    },
+    "pricing": {
+      "withCommission": "mit {commission} Provision",
+      "zeroCommission": "ohne Provision",
+      "withoutCommission": "provisionsfrei",
+      "from": "ab"
+    },
+    "quote": "Mehr als Websites. Digitale Erlebnisse, die präsentieren, verkaufen, automatisieren und Wachstum fördern — mit durchdachtem Design, flüssigen Interaktionen und Technologie, die im Hintergrund zuverlässig arbeitet.",
+    "mascot": {
+      "description": "Unser Stammbaum des polnischen Adels umfasst viele talentierte Persönlichkeiten aus Bereichen wie Militär, Politik, Wirtschaft und Landwirtschaft. Nun betritt die Dynastie Drobysz die digitale Welt der Webentwicklung.",
+      "imageAlt": "Webentwickler-Maskottchen von Drobysz Web"
+    },
+    "contact": {
+      "title": "Wenn du Interesse hast",
+      "cta": "Lass uns sprechen"
     }
   }
 }

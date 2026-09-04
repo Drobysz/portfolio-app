@@ -14,7 +14,7 @@ export const DownloadBntSample = ({mode}: {mode: 'mobile' | 'desktop'})=> {
 			href="/resume/CV_Drobysz.pdf"
 			downloadFileName="Drobyshevski_CV"
 		>
-			Download CV
+			{t("downloadCv")}
 		</DownloadBtn>
 	)
 }

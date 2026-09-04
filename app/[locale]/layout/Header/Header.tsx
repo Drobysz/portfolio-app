@@ -5,6 +5,7 @@ import { useContext } from "react";
 import { DetailedHTMLProps, HTMLAttributes } from "react";
 import { AppContext } from "../../context/app.context";
 import { useWindowWidth } from "@/hooks";
+import { useTranslations } from "next-intl";
 
 import { 
     DownloadBtn, 
@@ -20,6 +21,7 @@ import {
 type HeaderType = DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>;
 
 export const Header = ({className}: HeaderType)=> {
+    const t = useTranslations("Layout");
     const { isVisible } = useContext(AppContext);
     const width = useWindowWidth() as number;
     const canShowPagination = (!isVisible && width >= 900) || (isVisible && width >= 1120);
@@ -41,7 +43,7 @@ export const Header = ({className}: HeaderType)=> {
                     href="/resume/CV_Drobyshevski.pdf"
                     downloadFileName="Drobyshevski_CV"
                 >
-                    Download CV
+                    {t("downloadCv")}
                 </DownloadBtn>
                 <MenuBtn className={cn({
                     ["min-[900px]:hidden"]: !isVisible,

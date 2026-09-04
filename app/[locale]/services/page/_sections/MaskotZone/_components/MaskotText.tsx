@@ -1,7 +1,10 @@
-import { bagel_fat_one, press2p } from '@/fonts/fonts';
+import { press2p } from '@/fonts/fonts';
 import cn from 'classnames';
+import { useTranslations } from 'next-intl';
 
 export const MaskotText = ()=> {
+	const t = useTranslations("Services.mascot");
+
 	return (
 		<p className={cn(
 			"text-center text-white text-sm",
@@ -11,7 +14,7 @@ export const MaskotText = ()=> {
 			"max-[420px]:text-[0.5rem]",
 			press2p.className
 		)}>
-			Our family tree of Polish nobility has included many talented individuals in various fields, ranging from the military to politics, and from business to agriculture. Now, the Drobysz Dynasty is entering the digital realm of web development.
+			{t("description")}
 		</p>
 	)
 }

@@ -1,28 +1,24 @@
 [
     {
-        "name": "Showcase",
-        "description": "Creative websites built to present your brand, product or service with strong visuals and smooth interactions.",
+        "id": "showcase",
         "price": 240,
         "comission": "0%"
     },
 
     {
-        "name": "E-commerce",
-        "description": "Complete online stores with product management, checkout, payments and everything needed to start selling.",
+        "id": "ecommerce",
         "price": 480,
         "comission": "2-5%"
     },
 
     {
-        "name": "Platform",
-        "description": "Custom web platforms with user accounts, subscriptions, dashboards and functionality built around your business.",
+        "id": "platform",
         "price": 720,
         "comission": "3-5%"
     },
 
     {
-        "name": "Reservation",
-        "description": "Booking systems with availability, calendars, online payments and automated reservation management.",
+        "id": "reservation",
         "price": 540,
         "comission": "2-4%"
     }
