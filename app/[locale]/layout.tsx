@@ -4,7 +4,8 @@ import {
   SidebarMenu,
   LangBar,
   NotificationBar,
-  MouseGuide
+  MouseGuide,
+  SmoothScrollContextProvider,
 } from "./layout/index";
 import styles from "./layout/GridLayout.module.scss"
 import { AppContextProvider } from "./context/app.context";
@@ -34,19 +35,21 @@ export default async function RootLayout({
     <html lang={locale}>
       <body className='bg-[#0a0a0a]'>
         <NextIntlClientProvider>
-          <AppContextProvider>
-            <SidebarMenu />
-            <NotificationBar />
-            <MouseGuide />
-            <div className={styles.wrapper}>
-                <LangBar />
-                <Header className={styles.header}/>
-                <main className={styles.main}> 
-                  {children}
-                </main>
-                <Footer className={styles.footer}/>
-            </div>
-          </AppContextProvider>
+          <SmoothScrollContextProvider>
+            <AppContextProvider>
+              <SidebarMenu />
+              <NotificationBar />
+              <MouseGuide />
+              <div className={styles.wrapper}>
+                  <LangBar />
+                  <Header className={styles.header}/>
+                  <main className={styles.main}> 
+                    {children}
+                  </main>
+                  <Footer className={styles.footer}/>
+              </div>
+            </AppContextProvider>
+          </SmoothScrollContextProvider>
         </NextIntlClientProvider>
       </body>
     </html>

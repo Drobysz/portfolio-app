@@ -22,7 +22,7 @@ type HeaderType = DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivEleme
 export const Header = ({className}: HeaderType)=> {
     const { isVisible } = useContext(AppContext);
     const width = useWindowWidth();
-    const canShowPagination = (!isVisible && width >= 850) || (isVisible && width >= 1080);
+    const canShowPagination = (!isVisible && width >= 900) || (isVisible && width >= 1120);
 
     return (
         <HeaderWrapper 
@@ -44,8 +44,8 @@ export const Header = ({className}: HeaderType)=> {
                     Download CV
                 </DownloadBtn>
                 <MenuBtn className={cn({
-                    ["min-[850px]:hidden"]: !isVisible,
-                    ["min-[1080px]:hidden"]: isVisible,
+                    ["min-[900px]:hidden"]: !isVisible,
+                    ["min-[1120px]:hidden"]: isVisible,
                 })}/>
             </div>
         </HeaderWrapper>

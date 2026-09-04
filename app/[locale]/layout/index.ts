@@ -4,3 +4,4 @@ export * from "./SidebarMenu/SidebarMenu";
 export * from "./LangBar/LangBar";
 export * from "./NotificationBar/NotificationBar";
 export * from "./MouseGuide/MouseGuide";
+export * from "./SmoothScroll/SmoothScroll";

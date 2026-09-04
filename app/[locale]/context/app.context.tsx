@@ -18,7 +18,7 @@ export const AppContext = createContext<AppContextProps>({
 });
 
 export const AppContextProvider = ({children}: {children: ReactNode})=> {
-    const [ isVisible, setVisible ] = useState(false);
+    const [isVisible, setVisible] = useState(false);
     const [isMenuOpened, setMenuOpened] = useState(false);
     const [mouseGuide, setMouseGuide] = useState<Coords | null>(null);
     const [mouseText, setMouseText] = useState("");
