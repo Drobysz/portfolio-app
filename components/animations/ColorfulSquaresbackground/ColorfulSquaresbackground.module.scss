@@ -1,0 +1,140 @@
+$grid-color: #334155;
+
+.wrapper {
+  transform: translate(-40%, -60%) skewX(-48deg) skewY(14deg) scale(0.675);
+}
+
+.gridAnchor {
+  --grid-columns: 34;
+  --grid-rows: 24;
+
+  position: relative;
+  width: calc(var(--grid-columns) * 4rem);
+  height: 2rem;
+  flex: 0 0 calc(var(--grid-columns) * 4rem);
+}
+
+.gridSurface {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(var(--grid-rows) * 2rem);
+  contain: layout style;
+  pointer-events: none;
+}
+
+.gridSurface::before,
+.gridSurface::after {
+  position: absolute;
+  content: "";
+  pointer-events: none;
+}
+
+.gridSurface::before {
+  inset: 0;
+  z-index: 1;
+  border-right: 1px solid $grid-color;
+  border-bottom: 1px solid $grid-color;
+  background-image:
+    linear-gradient(to right, $grid-color 1px, transparent 1px),
+    linear-gradient(to bottom, $grid-color 1px, transparent 1px);
+  background-size: 4rem 2rem;
+}
+
+.gridSurface::after {
+  top: -14px;
+  left: -22px;
+  z-index: 2;
+  width: calc(100% + 22px);
+  height: calc(100% + 14px);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='128' height='64' viewBox='0 0 128 64' fill='none'%3E%3Cpath d='M20 6v12m6-6H14' stroke='%23334155' stroke-width='1' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 8rem 4rem;
+}
+
+.trailLayer {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.trailItem {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4rem;
+  height: 2rem;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.fadeA {
+  animation: trail-fade-a 900ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.fadeB {
+  animation: trail-fade-b 900ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes trail-fade-a {
+  0%,
+  18% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes trail-fade-b {
+  0%,
+  18% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@media (min-width: 361px) {
+  .gridAnchor {
+    --grid-columns: 42;
+    --grid-rows: 30;
+  }
+}
+
+@media (min-width: 481px) {
+  .gridAnchor {
+    --grid-columns: 54;
+    --grid-rows: 38;
+  }
+}
+
+@media (min-width: 601px) {
+  .gridAnchor {
+    --grid-columns: 80;
+    --grid-rows: 58;
+  }
+
+  .gridSurface {
+    pointer-events: auto;
+  }
+}
+
+@media (min-width: 901px) {
+  .gridAnchor {
+    --grid-columns: 110;
+    --grid-rows: 78;
+  }
+}
+
+@media (min-width: 1201px) {
+  .gridAnchor {
+    --grid-columns: 150;
+    --grid-rows: 100;
+  }
+}

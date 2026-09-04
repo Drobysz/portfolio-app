@@ -29,7 +29,7 @@ export const Logo = ({
                     doppelganger.className, 
                     titleClassName
                 )}>
-                    Alexander Drobysz
+                    Drobysz Web
                 </p>
             }
         </div>
