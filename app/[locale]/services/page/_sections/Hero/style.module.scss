@@ -1,0 +1,29 @@
+@reference "tailwindcss";
+
+.shader_background_container {
+    @apply h-screen absolute inset-0
+        bg-linear-to-b from-black/50
+        to-black/90;
+}
+
+.shader_background_container2 {
+    @apply h-screen absolute inset-0
+        bg-linear-to-t from-[#0a0a0a] from-5%
+        to-[#0a0a0a]/20 to-60% z-10;
+}
+
+.hero_container {
+    @apply h-screen w-full overflow-hidden;
+}
+
+.content_container {
+    @apply h-screen w-full relative overflow-hidden;
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+
+@media (max-width: 995px) {
+    .content_container {
+        @apply flex flex-col;
+    }
+}

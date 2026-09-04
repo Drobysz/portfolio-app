@@ -1,0 +1,77 @@
+@reference "tailwindcss";
+
+.section_container {
+    @apply h-dvh w-full relative mt-30
+        overflow-hidden rounded-t-4xl;
+}
+
+.elevator {
+    @apply h-[inherit] place-items-center 
+        place-content-center;
+}
+
+.background_video_wrapper {
+    @apply absolute inset-0
+        overflow-hidden rounded-t-4xl
+        -z-10;
+}
+
+.shader_background_container {
+    @apply h-screen absolute inset-0
+        bg-linear-to-t from-[#0a0a0a] from-10%
+        to-[#0a0a0a]/20 to-60% z-10;
+}
+
+.content_container {
+    @apply text-black 
+        text-4xl flex flex-col
+        items-center gap-5
+        justify-center
+        px-15 py-8 bg-black/10
+        backdrop-blur-2xl;
+}
+
+.title {
+    @apply text-white font-semibold
+        text-2xl;
+}
+
+@media (max-width: 690px) {
+    .title {
+        @apply text-xl;
+    }
+
+    .content_container {
+        @apply px-7 py-4.5;
+    }
+}
+
+@media (max-width: 540px) {
+    .title {
+        @apply text-base;
+    }
+
+    .content_container {
+        @apply px-7 py-3.5;
+    }
+}
+
+@media (max-width: 440px) {
+    .title {
+        @apply text-sm;
+    }
+
+    .content_container {
+        @apply px-5;
+    }
+}
+
+@media (max-width: 380px) {
+    .title {
+        @apply text-xs;
+    }
+
+    .content_container {
+        @apply px-3;
+    }
+}

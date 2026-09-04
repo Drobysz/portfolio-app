@@ -1,0 +1,21 @@
+[
+    {
+        "tag": "Showcase",
+        "img_cover": "/swiping_folders/dp-carrelage.png"
+    },
+
+    {
+        "tag": "E-commerce",
+        "img_cover": "/swiping_folders/ewenli.png"
+    },
+
+    {
+        "tag": "Platform",
+        "img_cover": "/swiping_folders/dfclub.png"
+    },
+
+    {
+        "tag": "Reservation",
+        "img_cover": "/swiping_folders/renting.png"
+    }
+]

@@ -1,0 +1,56 @@
+@reference "tailwindcss";
+
+.header_container {
+    @apply text-white h-fit
+        flex flex-col
+        items-center;
+}
+
+.title {
+    @apply text-6xl font-bold
+        bg-clip-text text-transparent
+        bg-linear-to-b from-neutral-200
+        to-neutral-600;
+}
+
+.subtitle {
+    @apply text-zinc-400;
+}
+
+@media (max-width: 995px) {
+    .header_container {
+        @apply items-start w-fit;
+    }
+
+    .title {
+        @apply text-5xl;
+    }
+
+    .subtitle {
+        @apply self-center;
+    }
+}
+
+@media (max-width: 620px) {
+    .header_container {
+        @apply items-center w-full;
+    }
+
+    .title {
+        @apply text-4xl;
+    }
+
+    .subtitle {
+        @apply text-sm;
+    }
+}
+
+@media (max-width: 400px) {
+    .title {
+        @apply text-3xl;
+    }
+
+    .subtitle {
+        @apply text-xs;
+    }
+}

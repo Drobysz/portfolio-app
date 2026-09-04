@@ -1,11 +1,19 @@
 // Google fonts import
-import { Inter, Bagel_Fat_One, Handjet } from 'next/font/google';
+import { 
+  Inter, Bagel_Fat_One, Handjet,
+  Press_Start_2P
+} from 'next/font/google';
 
 // Local font tool
 import localFont from 'next/font/local'
 
 
 // Google fonts
+export const press2p = Press_Start_2P({
+    weight: '400',
+    subsets: ['latin']
+  });
+
 export const handjet = Handjet({
     weight: '400',
     subsets: ['latin']

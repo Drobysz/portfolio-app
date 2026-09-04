@@ -1,0 +1,33 @@
+@reference "tailwindcss";
+
+.tunnel {
+    @apply h-[600vh] flex
+    justify-center w-full;
+}
+
+.elevator {
+    @apply sticky top-0 h-screen 
+        place-items-center 
+        place-content-center
+        max-w-200
+        max-[580px]:h-[60vh]
+        max-[580px]:top-[20vh];
+}
+
+.quote_text {
+    @apply text-6xl flex flex-wrap 
+        justify-center gap-3
+        max-[820px]:text-5xl
+        max-[690px]:text-4xl
+        max-[580px]:text-3xl
+        max-[580px]:gap-2
+        max-[480px]:text-2xl
+        max-[480px]:gap-1.5
+        max-[480px]:leading-5;
+}
+
+// @media (max-width: 820px) {
+//     .quote_text {
+//         @apply text-4xl;
+//     }
+// }
