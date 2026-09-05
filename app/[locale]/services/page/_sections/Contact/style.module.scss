@@ -47,6 +47,10 @@
 }
 
 @media (max-width: 540px) {
+    .section_container {
+        @apply h-[85dvh];
+    }
+
     .title {
         @apply text-base;
     }

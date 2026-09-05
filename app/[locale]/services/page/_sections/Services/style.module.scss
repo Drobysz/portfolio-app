@@ -6,6 +6,7 @@
 
 .card_container {
     @apply h-screen
+        flex
         place-items-center
         place-content-center
         sticky;

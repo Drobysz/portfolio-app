@@ -31,11 +31,7 @@
     }
 }
 
-@media (max-width: 620px) {
-    .header_container {
-        @apply items-center w-full;
-    }
-
+@media (max-width: 805px) {
     .title {
         @apply text-4xl;
     }
@@ -45,12 +41,26 @@
     }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 635px) {
+    .header_container {
+        @apply items-center w-full;
+    }
+
     .title {
         @apply text-3xl;
     }
 
     .subtitle {
         @apply text-xs;
+    }
+}
+
+@media (max-width: 520px) {
+    .title {
+        @apply text-2xl text-center;
+    }
+
+    .subtitle {
+        @apply text-[0.625rem];
     }
 }
