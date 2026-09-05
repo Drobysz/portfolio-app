@@ -37,7 +37,7 @@ export const MainBtn = ({
         "minus": Minus
     }
     const widthBufferSizeGrid = {
-        "lg": 36,
+        "lg": 60,
         "md": 24,
         "sm": 20,
     };
@@ -111,7 +111,7 @@ export const MainBtn = ({
                                 "scale-65 pt-0.5",
                                 transitionFast,
                                 iconSizes,
-                                hover && "translate-x-5" 
+                                hover && "translate-x-6" 
                             )}
                         />
                     </span>
