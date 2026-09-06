@@ -11,7 +11,6 @@ export const MaskotText = ()=> {
 			"max-w-175",
 			"max-[820px]:text-sm max-[820px]:max-w-100",
 			"max-[620px]:text-xs",
-			"max-[420px]:text-[0.5rem]",
 			press2p.className
 		)}>
 			{t("description")}
