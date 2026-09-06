@@ -1,0 +1,30 @@
+@reference "tailwindcss";
+
+.price_unit {
+        @apply flex flex-col gap-1;
+    }
+
+    .comission_tag {
+        @apply text-lg -translate-x-5;
+    }
+
+    .price_container {
+        @apply flex gap-3;
+    }
+
+    .from {
+        @apply italic pt-1
+            font-semibold;
+    }
+
+    .price_tag {
+        @apply flex gap-1;
+    }
+
+    .price {
+        @apply text-5xl font-semibold;
+    }
+
+    .currency {
+        @apply text-3xl;
+    }

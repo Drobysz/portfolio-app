@@ -1,0 +1,63 @@
+@reference "tailwindcss";
+
+.card {
+    @apply h-75 w-150
+        rounded-3xl px-6 py-3
+        bg-neutral-800 border
+        border-zinc-500 flex flex-col
+        justify-between relative;
+
+    .title {
+        @apply font-semibold text-transparent
+            text-5xl italic bg-clip-text 
+            bg-linear-to-b from-neutral-200
+            to-neutral-500;
+    }
+
+    .desc {
+        @apply  text-sm text-neutral-300;
+    }
+
+    .header {
+        @apply flex flex-col gap-2;
+    }
+
+    .price_bar {
+        @apply text-white flex 
+            items-center justify-around;
+    }
+}
+
+@media (max-width: 620px) {
+    .card {
+        @apply h-85 w-80;
+
+        .title {
+            @apply text-3xl;
+        }
+
+        .price_bar {
+            @apply flex-col gap-2;
+
+            .from {
+                @apply text-sm;
+            }
+
+            .price {
+                @apply text-2xl;
+            }
+
+            .currency {
+                @apply text-lg;
+            }
+        }
+        
+        .separator {
+            @apply w-full h-px;
+        }
+
+        .desc {
+            @apply text-xs;
+        }
+    }
+}

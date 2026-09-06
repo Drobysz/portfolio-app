@@ -6,7 +6,7 @@ import {
     Skills,
     Experience,
     Education
-} from "./components/index";
+} from "./_components/index";
 import cn from "classnames";
 
 export const CV = ()=> {
@@ -18,10 +18,14 @@ export const CV = ()=> {
             spread={80}
         >
             <section className={s.section_frame}>
-                <div className={cn(
-                    s.contact_data_section,
-                    s.no_scrollbar
-                )}>
+                <div 
+                    className={cn(
+                        s.contact_data_section,
+                        s.no_scrollbar
+                    )}
+                    data-lenis-prevent
+                    
+                >
                     <CardSpotlight className="flex flex-col gap-12 justify-between">
                         <AboutMe />
                         <Skills />
