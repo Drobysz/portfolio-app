@@ -28,3 +28,18 @@
 .currency {
     @apply text-3xl;
 }
+
+@media (max-width: 620px) {
+
+    .from {
+        @apply text-sm;
+    }
+
+    .price {
+        @apply text-3xl;
+    }
+
+    .currency {
+        @apply text-lg;
+    }
+}

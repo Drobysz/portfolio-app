@@ -26,11 +26,16 @@
         @apply text-white flex 
             items-center justify-around;
     }
+
+    .separator {
+        @apply h-full w-0.5 
+            bg-zinc-400 rounded-4xl;
+    }
 }
 
 @media (max-width: 620px) {
     .card {
-        @apply h-85 w-80;
+        @apply h-95 w-90;
 
         .title {
             @apply text-3xl;
@@ -44,7 +49,7 @@
             }
 
             .price {
-                @apply text-2xl;
+                @apply text-xl;
             }
 
             .currency {

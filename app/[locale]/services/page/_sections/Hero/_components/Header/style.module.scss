@@ -1,5 +1,12 @@
 @reference "tailwindcss";
 
+.header_wrapper {
+    @apply pt-10 pl-10 
+        max-[995px]:pt-4 
+        max-[650px]:pl-0 
+        max-[650px]:pt-1;
+}
+
 .header_container {
     @apply text-white h-fit
         flex flex-col
@@ -47,7 +54,7 @@
     }
 
     .title {
-        @apply text-3xl;
+        @apply text-3xl text-center;
     }
 
     .subtitle {
@@ -57,7 +64,7 @@
 
 @media (max-width: 520px) {
     .title {
-        @apply text-2xl text-center;
+        @apply text-2xl;
     }
 
     .subtitle {

@@ -5,7 +5,7 @@ export const Header = ()=> {
     const t = useTranslations("Services.hero");
 
     return (
-        <header className="pt-10 pl-10 max-[995px]:pt-4 max-[400px]:pl-0">
+        <header className={s.header_wrapper}>
             <div className={s.header_container}>
                 <h1 className={s.title}>
                     {t("title")}
