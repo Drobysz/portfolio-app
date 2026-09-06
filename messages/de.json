@@ -14,7 +14,7 @@
     }
   },
   "Layout": {
-    "downloadCv": "Lebenslauf herunterladen",
+    "downloadCv": "Lebenslauf PDF",
     "nav": {
       "0": "Werdegang",
       "services": "Leistungen",
