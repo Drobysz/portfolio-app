@@ -9,6 +9,7 @@ import {
     Minus,
 } from "lucide-react";
 import { MainBtnProps } from "./MainBtn.proprs";
+import { useLocale } from "next-intl";
 
 export const MainBtn = ({
     size="md",
@@ -22,6 +23,7 @@ export const MainBtn = ({
     const [hover, setHover] = useState(false);
     const [signWidth, setSignWidth] = useState(0);
     const ref = useRef<HTMLSpanElement | null>(null);
+    const locale = useLocale();
 
     const transitionFast = "transition-transform duration-150 ease-in";
     const transitionSlow = "transition-transform duration-450 ease-out";
@@ -37,7 +39,7 @@ export const MainBtn = ({
         "minus": Minus
     }
     const widthBufferSizeGrid = {
-        "lg": 60,
+        "lg": ["fr", "en", "it"].includes(locale) ? 55 : 65,
         "md": 24,
         "sm": 20,
     };
@@ -111,7 +113,7 @@ export const MainBtn = ({
                                 "scale-65 pt-0.5",
                                 transitionFast,
                                 iconSizes,
-                                hover && "translate-x-6" 
+                                hover && "translate-x-7" 
                             )}
                         />
                     </span>
