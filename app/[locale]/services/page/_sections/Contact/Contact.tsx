@@ -71,7 +71,7 @@ export const Contact = ()=> {
                         icon="link"
                         size={isBtnDesktop ? "lg" : "md"}
                         color="white"
-                        onClick={()=> router.push("/resume")}
+                        onClick={()=> router.push("https://linktr.ee/alexdrobysz")}
                     >
                         {t("cta")}
                     </MainBtn>
