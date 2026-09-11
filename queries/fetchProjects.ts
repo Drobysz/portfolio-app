@@ -6,17 +6,17 @@ export const fetchProjects = async ()=> {
 };
 
 export const fetchProjectsFromApi = async (): Promise<Project[]> => {
-    const apiUrl = process.env.NEXT_PUBLIC_API_URL?.replace(/\/$/, "");
+    // const apiUrl = process.env.NEXT_PUBLIC_API_URL?.replace(/\/$/, "");
 
-    if (!apiUrl) {
-        throw new Error("NEXT_PUBLIC_API_URL is not configured");
-    }
+    // if (!apiUrl) {
+    //     throw new Error("NEXT_PUBLIC_API_URL is not configured");
+    // }
 
     const controller = new AbortController();
     const timeoutId = setTimeout(() => controller.abort(), 15_000);
 
     try {
-        const res = await fetch(`${apiUrl}/api/projects`, {
+        const res = await fetch("/api/projects", {
             method: "GET",
             headers: {
                 Accept: "application/json",
